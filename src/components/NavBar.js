@@ -32,8 +32,8 @@ export default function NavBar() {
     <Disclosure as="nav" className="bg-green-800 sticky top-0">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 py-5 sm:px-6 lg:px-8">
-            <div className="relative flex items-center justify-between h-16">
+          <div className="max-w-7xl mx-auto px-6 py-5 sm:px-6 md:px-4 lg:px-8">
+            <div className="relative flex items-center justify-between h-10 sm:h-12 md:h-16">
               <div className="flex-1 flex items-center justify-between sm:items-stretch sm:justify-between">
                 <div className="flex-shrink-0 flex items-center">
                   <img
@@ -47,20 +47,20 @@ export default function NavBar() {
                     alt="Logo Dynamai"
                   />
                 </div>
-                <div className="flex items-center sm:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500">
+                <div className="flex items-center focus:outline-none sm:hidden">
+                <Disclosure.Button className="inline-flex focus:outline-none items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:bg-green-700 focus:ring-2 focus:ring-inset focus:ring-green-500">
                   <span className="sr-only">Abrir menu</span>
-                  <Hamburger label="Ver menu" toggled={open} />
+                  <Hamburger className="focus:outline-none" label="Ver menu" size={30} toggled={open} />
                 </Disclosure.Button>
               </div>
-                <div className="hidden sm:flex justify-center content-center items-center">
-                  <div className="flex lg:space-x-6">
+                <div className="hidden sm:flex justify-center select-none content-center items-center">
+                  <div className="flex focus:outline-none lg:space-x-6">
                     {navigation.map((item) => (
                       <NavLink
                         key={item.name}
                         exact to={item.href}
-                        activeClassName="text-green-400 bg-green-900 hover:text-green-400 hover:bg-green-900"
-                        className="text-gray-300 hover:text-white hover:bg-green-700 px-3 py-2 rounded-md text-xs md:text-base uppercase font-medium whitespace-nowrap"
+                        activeClassName="text-green-400 bg-green-900 focus:outline-none hover:text-green-400 hover:bg-green-900"
+                        className="text-gray-300 focus:outline-none hover:text-white hover:bg-green-700 px-3 py-2 rounded-md text-xs md:text-base uppercase font-medium whitespace-nowrap"
                       >
                         {item.name}
                       </NavLink>
