@@ -1,7 +1,7 @@
 import React from 'react'
 import { Disclosure, Transition  } from '@headlessui/react'
 import { NavLink } from 'react-router-dom'
-import { Spin as Hamburger } from 'hamburger-react'
+import { Squash as Hamburger } from 'hamburger-react'
 
 const navigation = [
     { 
@@ -50,7 +50,7 @@ export default function NavBar() {
                 <div className="flex items-center focus:outline-none sm:hidden">
                 <Disclosure.Button className="inline-flex focus:outline-none items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:bg-green-700 focus:ring-2 focus:ring-inset focus:ring-green-500">
                   <span className="sr-only">Abrir menu</span>
-                  <Hamburger className="focus:outline-none" label="Ver menu" size={30} toggled={open} />
+                  <Hamburger className="focus:outline-none" label="Ver menu" size={28} toggled={open} />
                 </Disclosure.Button>
               </div>
                 <div className="hidden sm:flex justify-center select-none content-center items-center">
