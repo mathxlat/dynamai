@@ -3,11 +3,13 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Error404 from './pages/Error404';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <BrowserRouter>
         <NavBar />
+        <Footer />
       <Switch>
 
         <Route exact path='/'>
