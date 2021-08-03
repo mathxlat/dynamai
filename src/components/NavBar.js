@@ -75,8 +75,8 @@ export default function NavBar() {
             leaveFrom="translate-y-0 opacity-100"
             leaveTo="-translate-y-6 opacity-0"
           >
-            <Disclosure.Panel className="sm:hidden absolute">
-              <div className="px-2 pt-2 pb-3 space-y-1 bg-primario w-screen">
+            <Disclosure.Panel className="sm:hidden absolute w-full">
+              <div className="px-2 pt-2 pb-3 space-y-1 bg-primario">
                 {navigation.map((item) => (
                   <NavLink
                       key={item.name}
