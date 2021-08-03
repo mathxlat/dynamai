@@ -20,6 +20,9 @@ module.exports = {
       },
       fontFamily: {
         'nunito': "'Nunito', sans-serif"
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(273.97% 273.97% at 54.48% 50.06%, var(--tw-gradient-stops))',
       }
     },
   },

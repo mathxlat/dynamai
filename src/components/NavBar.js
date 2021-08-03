@@ -26,7 +26,7 @@ const navigation = [
 
 export default function NavBar() {
   return (
-    <Disclosure as="nav" className="bg-primario sticky top-0">
+    <Disclosure as="nav" className="bg-primario sticky z-50 top-0">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-6 py-5 sm:px-6 md:px-4 lg:px-8">
