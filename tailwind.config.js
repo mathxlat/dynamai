@@ -11,8 +11,6 @@ module.exports = {
         "acento-2": "#8AB356"
       },
       textColor: {
-        "primario": "#ffffffff",
-        "primario-op": "#ffffffdd",
         "secundario-1": "#7147B1",
         "secundario-2": "#499BA2",
         "acento-1": "#B9536E",
