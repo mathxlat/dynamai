@@ -1,4 +1,5 @@
 import React from 'react'
+import ButtonLink from '../components/ButtonLink'
 // import Carousel from '../components/Carousel/index'
 
 const infoBeneficiarios = [
@@ -28,6 +29,7 @@ function Home() {
                         <h1>Queremos acompañarte durante la crianza, desde el embarazo.</h1>
                         <p className="mt-8" >Por eso creamos esta plataforma gratuita y de fácil acceso. acercando a madres y padres todos los conocimientos y herramientas que
                         necesitan durante el embarazo e infancia, de forma didáctica y aplicable.</p>
+                        <ButtonLink text="DESCARGAR LA APP" to="/descargar" className="mt-16" />
                     </div>
                 </div>
             </article>
@@ -62,9 +64,10 @@ function Home() {
 
             <article className="bg-gradient-radial w-full min-h-screen max-h-full from-secundario-2 to-black">
                 <div className="max-w-7xl h-screen flex flex-col justify-center items-center mx-auto px-10 py-6">
-                        <h2 className="text-center">Creemos en un mundo en el que todos puedan desarrollar al
-                        máximo su potencial y, así también, contribuir a mejorar la
-                        sociedad en su conjunto.</h2>
+                    <h2 className="text-center">Creemos en un mundo en el que todos puedan desarrollar al
+                    máximo su potencial y, así también, contribuir a mejorar la
+                    sociedad en su conjunto.</h2>
+                    <ButtonLink text="Quiero donar" to="/quierodonar" className="mt-16" />
                 </div>
             </article>
         </section>
