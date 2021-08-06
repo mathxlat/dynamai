@@ -7,7 +7,7 @@ const infoFooter = [
 ]
 const redes = [
     {
-        link: "esto es un link",
+        link: "https://www.facebook.com/DynamaiApp/",
         name: "Facebook",
         icon: "/img/redes/facebook.svg"
     },
@@ -22,7 +22,7 @@ const redes = [
         icon: "/img/redes/linkedin.svg"
     },
     {
-        link: "esto es un link",
+        link: "https://www.instagram.com/dynamaiapp/",
         name: "Instagram",
         icon: "/img/redes/instagram.svg"
     },
@@ -34,9 +34,9 @@ export default function Footer() {
             <div>
                 <div className="flex flex-row max-w-xs mx-auto justify-between px-12 pt-5">
                     {redes.map( item => (
-                        <div key={item.name}>
+                        <a href={item.link} target="_blank" rel="noreferrer" key={item.name}>
                             <img className="w-6 select-none" src={item.icon} alt={item.name} />
-                        </div>
+                        </a>
                     ))}
                 </div>
                 <div className="flex flex-col xl:flex-row max-w-7xl mx-auto justify-between px-10 py-5">
