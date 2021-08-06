@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Disclosure, Transition  } from '@headlessui/react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link, useLocation } from 'react-router-dom'
 import { Squash as Hamburger } from 'hamburger-react'
 import SvgLogoDynamai from '../logo'
 
@@ -25,6 +25,23 @@ const navigation = [
 
 
 export default function NavBar() {
+  const location = useLocation()
+  const [activeLocation, setActiveLocation] = useState('')
+  useEffect(()=>{
+    setActiveLocation(location.pathname)
+  }, [location])
+  let hoverNav;
+  if(activeLocation === navigation[0].href){
+    hoverNav = 'left-0';
+  } else if (activeLocation === navigation[1].href){
+    hoverNav = 'left-32';
+  } else if (activeLocation === navigation[2].href){
+    hoverNav = 'left-64';
+  } else if (activeLocation === navigation[3].href){
+    hoverNav = 'left-3/4';
+  } else {
+    hoverNav = 'hidden'
+  }
   return (
     <Disclosure as="nav" className="bg-primario shadow-lg sticky z-50 top-0">
       {({ open }) => (
@@ -42,19 +59,20 @@ export default function NavBar() {
                   <Hamburger className="focus:outline-none" label="Ver menu" size={28} toggled={open} />
                 </Disclosure.Button>
               </div>
-                <div className="hidden sm:flex items-center">
-                  <div className=" select-none content-center items-center">
-                    <div className="flex focus:outline-none lg:space-x-6">
+                <div className="hidden sm:flex w-full justify-end items-center">
+                  <div className="select-none max-w-prose">
+                    <div className="flex relative max-w-prose focus:outline-none">
                       {navigation.map((item) => (
                         <NavLink
                           key={item.name}
                           exact to={item.href}
                           activeClassName="text-white text-opacity-100 focus:outline-none"
-                          className="font-nunito text-white text-opacity-90 hover:text-opacity-100 focus:outline-none px-3 py-2 rounded-md text-xs md:text-base uppercase font-semibold whitespace-nowrap"
+                          className="font-nunito w-32 flex items-center justify-center text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap"
                         >
                           {item.name}
                         </NavLink>
                       ))}
+                      <div className={`${hoverNav} w-32 transition-all bottom-0 h-1 bg-acento-2 absolute`}></div>
                     </div>
                   </div>
                   <Link 
