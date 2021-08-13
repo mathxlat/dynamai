@@ -27,10 +27,10 @@ function Carousel() {
                 "disableOnInteraction": false
             }}
             className="mySwiper">
-            <SwiperSlide><img src="/img/carrousel/carrousel1.png" /></SwiperSlide>
-            <SwiperSlide><img src="/img/carrousel/carrousel2.png" /></SwiperSlide>
-            <SwiperSlide><img src="/img/carrousel/carrousel3.png" /></SwiperSlide>
-            <SwiperSlide><img src="/img/carrousel/carrousel4.png" /></SwiperSlide>
+            <SwiperSlide><img src="/img/carrousel/carrousel1.png" alt="imagen dynamai" /></SwiperSlide>
+            <SwiperSlide><img src="/img/carrousel/carrousel2.png" alt="imagen dynamai" /></SwiperSlide>
+            <SwiperSlide><img src="/img/carrousel/carrousel3.png" alt="imagen dynamai" /></SwiperSlide>
+            <SwiperSlide><img src="/img/carrousel/carrousel4.png" alt="imagen dynamai" /></SwiperSlide>
         </Swiper>
     </>
     )
