@@ -19,21 +19,18 @@ function Carousel() {
     return (
     <>
         <Swiper 
-            pagination={true} 
+            pagination={{
+                clickable: true
+            }} 
             autoplay={{
-                "delay": 10500,
+                "delay": 1500,
                 "disableOnInteraction": false
             }}
             className="mySwiper">
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide>
+            <SwiperSlide><img src="/img/carrousel/carrousel1.png" /></SwiperSlide>
+            <SwiperSlide><img src="/img/carrousel/carrousel2.png" /></SwiperSlide>
+            <SwiperSlide><img src="/img/carrousel/carrousel3.png" /></SwiperSlide>
+            <SwiperSlide><img src="/img/carrousel/carrousel4.png" /></SwiperSlide>
         </Swiper>
     </>
     )

@@ -72,7 +72,7 @@ export default function NavBar() {
                           {item.name}
                         </NavLink>
                       ))}
-                      <div className={`${hoverNav} w-32 transition-all bottom-0 h-1 bg-acento-2 absolute`}></div>
+                      <div className={`${hoverNav} w-32 transition-all duration-300 bottom-0 h-1 bg-acento-2 absolute`}></div>
                     </div>
                   </div>
                   <Link 

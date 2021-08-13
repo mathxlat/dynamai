@@ -20,15 +20,18 @@
 
 @layer base {
   h1 {
-    @apply text-white font-nunito font-bold text-5xl;
+    @apply text-semiblack font-nunito font-bold text-5xl;
   }
   h2 {
-    @apply text-white font-nunito font-bold text-4xl;
+    @apply text-semiblack font-nunito font-bold text-4xl;
   }
   h3 {
-    @apply text-white font-nunito font-bold text-3xl;
+    @apply text-semiblack font-nunito font-bold text-3xl;
   }
   p {
-    @apply text-white font-normal text-2xl font-nunito;
+    @apply text-semiblack font-normal text-2xl font-nunito;
+  }
+  small {
+    @apply text-semiblack font-normal text-base font-nunito italic;
   }
 }
