@@ -39,7 +39,7 @@ export default function NavBar() {
     hoverNav = 'left-32';
   } else if (activeLocation === navigation[3].href){
     hoverNav = 'left-3/4';
-  } else if (activeLocation === "voluntariado" || "organizacion" || "instituciones"){
+  } else if (activeLocation === "/voluntariado" || "/organizacion" || "/instituciones"){
     hoverNav = 'left-64';
   } else {
     hoverNav = 'hidden'
