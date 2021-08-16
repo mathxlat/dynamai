@@ -12,6 +12,7 @@ module.exports = {
       },
       textColor: {
         "semiblack": "#333",
+        "primario": "#208849",
         "secundario-1": "#7147B1",
         "secundario-2": "#499BA2",
         "acento-1": "#B9536E",

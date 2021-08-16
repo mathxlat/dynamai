@@ -52,7 +52,13 @@ function Home() {
                         <h1 className="text-white">Queremos acompañarte durante la crianza, desde el embarazo.</h1>
                         <p className="mt-8 text-white" >Por eso creamos esta plataforma gratuita y de fácil acceso. acercando a madres y padres todos los conocimientos y herramientas que
                         necesitan durante el embarazo e infancia, de forma didáctica y aplicable.</p>
-                        <ButtonLink text="DESCARGAR LA APP" to="/descargar" className="mt-16" />
+                        <div className="flex items-center mt-16">
+                            <ButtonLink text="DESCARGAR LA APP" to="/descargar"/>
+                            <a href="http://" className="flex justify-center ml-7 items-center">
+                                <img src="/img/icons/play-button.svg" alt="play" className="w-8"/>
+                                <p className="text-white ml-3 text-base">Cómo funciona</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </article>
