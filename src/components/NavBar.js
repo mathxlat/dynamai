@@ -24,6 +24,20 @@ const navigation = [
     },
 ]
 
+const participa = [
+    { 
+      name: 'Organización pública/privada', 
+      href: '/organizacion' 
+    },
+    { 
+      name: 'Instituciones de salud', 
+      href: '/instituciones' 
+    },
+    { 
+      name: 'Voluntariado', 
+      href: '/voluntariado' 
+    },
+]
 
 export default function NavBar() {
   const location = useLocation()
@@ -39,7 +53,11 @@ export default function NavBar() {
     hoverNav = 'left-32';
   } else if (activeLocation === navigation[3].href){
     hoverNav = 'left-3/4';
-  } else if (activeLocation === "/voluntariado" || "/organizacion" || "/instituciones"){
+  } else if (activeLocation === participa[0].href){
+    hoverNav = 'left-64';
+  } else if (activeLocation === participa[1].href){
+    hoverNav = 'left-64';
+  } else if (activeLocation === participa[2].href){
     hoverNav = 'left-64';
   } else {
     hoverNav = 'hidden'
@@ -96,23 +114,15 @@ export default function NavBar() {
                           <Popover.Panel className="absolute z-10 -ml-4 -mt-1 transform px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                           <div className="rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                             <div className="relative grid gap-6 px-5 py-6 sm:gap-8 sm:p-8">
-                              <NavLink exact to="/organizacion" 
-                                activeClassName="text-primario"
-                                onClick={() => LinkParticipaRef.current?.click()} 
-                                className="-m-3 p-3 flex font-nunito border-b border-grey-500 font-semibold items-start opacity-80 hover:text-primario">
-                                Organización pública/privada
-                              </NavLink>
-                              <NavLink exact to="/instituciones" onClick={() => LinkParticipaRef.current?.click()} 
-                                activeClassName="text-primario"
-                                className="-m-3 p-3 flex font-nunito border-b border-grey-500 font-semibold items-start opacity-80 hover:text-primario">
-                                Instituciones de salud
-                              </NavLink>
-                              <NavLink exact to="/voluntariado" onClick={() => LinkParticipaRef.current?.click()} 
-                                activeClassName="text-primario"
-                                className="-m-3 p-3 flex font-nunito border-b border-white font-semibold items-start opacity-80 hover:text-primario"
-                                >
-                                Voluntariado
-                              </NavLink>
+                              {participa.map( item =>(
+                                  <NavLink exact to={item.href}
+                                  key={item.name}
+                                  activeClassName="text-primario"
+                                  onClick={() => LinkParticipaRef.current?.click()} 
+                                  className="-m-3 p-3 flex font-nunito border-b border-grey-500 last:border-white font-semibold items-start opacity-80 hover:text-primario">
+                                    {item.name}
+                                  </NavLink>
+                              ))}
                             </div>
                           </div>
                           </Popover.Panel>
