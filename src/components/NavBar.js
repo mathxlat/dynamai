@@ -3,7 +3,8 @@ import { Popover ,Disclosure, Transition  } from '@headlessui/react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import { Squash as Hamburger } from 'hamburger-react'
-import SvgLogoDynamai from '../logo'
+import SvgLogoDynamai from '../Logo'
+import SvgLogoLowDynamai from '../LogoLow'
 
 const navigation = [
     { 
@@ -70,7 +71,7 @@ export default function NavBar() {
             <div className="relative flex items-center justify-between h-10 sm:h-12 md:h-16">
               <div className="flex-1 flex items-center sm:items-stretch justify-between">
                 <Link to="/" className="flex-shrink-0 flex items-center">
-                  <SvgLogoDynamai className="hidden sm:block lg:hidden h-16 w-auto" alt="Logo Dynamai" />
+                  <SvgLogoLowDynamai className="hidden sm:block lg:hidden h-16 w-auto" alt="Logo Dynamai" />
                   <SvgLogoDynamai className="block sm:hidden lg:block h-16 w-auto" alt="Logo Dynamai" />
                 </Link>
                 <div className="flex items-center focus:outline-none sm:hidden">

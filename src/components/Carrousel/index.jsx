@@ -50,7 +50,7 @@ function Carousel() {
             }}
             className="mySwiper">
             {carrusel.map( item => (
-                <SwiperSlide>
+                <SwiperSlide key={item.title}>
                     <img className="select-none" src={item.img} alt="imagen dynamai" />
                     <div className="select-none">
                         <p className="text-white uppercase text-4xl w-3/6 font-bold">

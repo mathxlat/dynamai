@@ -23,7 +23,14 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(273.97% 273.97% at 54.48% 50.06%, var(--tw-gradient-stops))',
-      }
+      },
+      inset: {
+        '7/9': '77%'
+      },
+      screens: {
+        '3xl': '1600px',
+        '4xl': '1700px',
+      },
     },
   },
   variants: {

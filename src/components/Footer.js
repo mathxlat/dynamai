@@ -3,7 +3,7 @@ import React from 'react'
 const infoFooter = [
     {content: "contacto@dynamaiapp.org", id:"1"},
     {content: "Av. Rivadavia 882 – 5to. E – CP. 1002 – CABA, Buenos Aires, Argentina", id:"2"},
-    {content: "Teléfono +54 9 11 1111111", id:"3"},
+    {content: "Teléfono +54 9 1150361430", id:"3"},
 ]
 const redes = [
     {

@@ -3,11 +3,13 @@ import Home from './pages/Home';
 import Error404 from './pages/Error404';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import BtnWsp from './components/BtnWsp';
 
 function App() {
   return (
     <BrowserRouter>
         <NavBar />
+        <BtnWsp />
       <Switch>
 
         <Route exact path='/'>
