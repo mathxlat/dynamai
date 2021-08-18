@@ -3,7 +3,7 @@ import { Popover ,Disclosure, Transition  } from '@headlessui/react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import { Squash as Hamburger } from 'hamburger-react'
-import SvgLogoDynamai from '../Logo'
+import SvgLogoDynamai from '../logo'
 import SvgLogoLowDynamai from '../LogoLow'
 
 const navigation = [
