@@ -64,22 +64,38 @@ export default function NavBar() {
     hoverNav = 'hidden'
   }
   return (
-    <Disclosure as="nav" className="bg-primario shadow-lg sticky z-50 top-0">
+    <Disclosure as="nav" className="bg-primario shadow-lg sticky z-40 top-0">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-6 py-5 sm:px-6 md:px-4 lg:px-8">
             <div className="relative flex items-center justify-between h-10 sm:h-12 md:h-16">
               <div className="flex-1 flex items-center sm:items-stretch justify-between">
-                <Link to="/" className="flex-shrink-0 flex items-center">
-                  <SvgLogoLowDynamai className="hidden sm:block lg:hidden h-16 w-auto" alt="Logo Dynamai" />
-                  <SvgLogoDynamai className="block sm:hidden lg:block h-16 w-auto" alt="Logo Dynamai" />
-                </Link>
+                <div className="flex items-center">
                 <div className="flex items-center focus:outline-none sm:hidden">
-                <Disclosure.Button className="inline-flex focus:outline-none items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:bg-green-700 focus:ring-2 focus:ring-inset focus:ring-green-500">
-                  <span className="sr-only">Abrir menu</span>
-                  <Hamburger className="focus:outline-none" label="Ver menu" size={28} toggled={open} />
-                </Disclosure.Button>
-              </div>
+                  <Disclosure.Button className="inline-flex focus:outline-none items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:bg-green-700 focus:ring-2 focus:ring-inset focus:ring-green-500">
+                    <span className="sr-only">Abrir menu</span>
+                    <Hamburger className="focus:outline-none" 
+                    label="Ver menu" 
+                    size={34} 
+                    rounded={true} 
+                    toggled={open}
+                    distance="xl"
+                    />
+                  </Disclosure.Button>
+                </div>
+                  <Link to="/" className="flex-shrink-0 flex items-center">
+                    <SvgLogoLowDynamai className="hidden sm:block lg:hidden h-16 w-auto" alt="Logo Dynamai" />
+                    <SvgLogoDynamai className="block sm:hidden lg:block h-16 w-auto" alt="Logo Dynamai" />
+                  </Link>
+                </div>
+                <div className="flex items-center focus:outline-none sm:hidden">
+                  <Link
+                        to="/quierodonar"
+                        className="flex items-center transition justify-center px-10 py-2 border border-transparent rounded-full shadow-sm text-base font-medium uppercase tracking-wider text-secundario-1 bg-white hover:bg-gray-900"
+                        >
+                        Donar
+                  </Link>
+                </div>
                 <div className="hidden sm:flex w-full justify-end items-center">
                   <div className="select-none max-w-prose">
                     <div className="flex relative max-w-prose focus:outline-none">
@@ -170,14 +186,6 @@ export default function NavBar() {
                       {item.name}
                   </NavLink>
                 ))}
-                  <div>
-                    <Link
-                      to="/quierodonar"
-                      className="w-full flex items-center transition justify-center px-4 py-2 border border-transparent rounded-full shadow-sm text-base font-medium uppercase tracking-wider text-secundario-1 bg-white hover:bg-gray-900"
-                    >
-                      Quiero donar
-                    </Link>
-                  </div>
               </div>
             </Disclosure.Panel>
           </Transition>
