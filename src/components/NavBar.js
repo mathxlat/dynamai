@@ -76,7 +76,7 @@ export default function NavBar() {
                     <span className="sr-only">Abrir menu</span>
                     <Hamburger className="focus:outline-none" 
                     label="Ver menu" 
-                    size={34} 
+                    size={32} 
                     rounded={true} 
                     toggled={open}
                     distance="xl"
@@ -84,14 +84,14 @@ export default function NavBar() {
                   </Disclosure.Button>
                 </div>
                   <Link to="/" className="flex-shrink-0 flex items-center">
-                    <SvgLogoLowDynamai className="hidden sm:block lg:hidden h-16 w-auto" alt="Logo Dynamai" />
-                    <SvgLogoDynamai className="block sm:hidden lg:block h-16 w-auto" alt="Logo Dynamai" />
+                    <SvgLogoLowDynamai className="hidden sm:block lg:hidden h-14 md:h-16 w-auto" alt="Logo Dynamai" />
+                    <SvgLogoDynamai className="block sm:hidden lg:block h-14 md:h-16 w-auto" alt="Logo Dynamai" />
                   </Link>
                 </div>
                 <div className="flex items-center focus:outline-none sm:hidden">
                   <Link
                         to="/quierodonar"
-                        className="flex items-center transition justify-center px-10 py-2 border border-transparent rounded-full shadow-sm text-base font-medium uppercase tracking-wider text-secundario-1 bg-white hover:bg-gray-900"
+                        className="flex items-center transition justify-center px-4 mx-2 py-2 border border-transparent rounded-full shadow-sm text-base font-medium uppercase tracking-wider text-secundario-1 bg-white hover:bg-gray-900"
                         >
                         Donar
                   </Link>

@@ -26,12 +26,12 @@ const ArticleBeneficiarios = () => {
                         <h1 className="text-semiblack">
                             Beneficiarios potenciales
                         </h1>
-                        <div className="flex flex-col md:flex-row items-center md:items-start flex-wrap pt-10 w-full justify-between">
+                        <div className="flex flex-row items-start flex-nowrap pt-10 w-full justify-between">
                         {
                             infoBeneficiarios.map( item => (
                             <div key={item.title} className="max-w-sm py-8 flex flex-col items-center">
-                                <div className="rounded-full bg-acento-2 h-48 w-48 flex items-center justify-center">
-                                    <img className="w-32 select-none" src={item.icon} alt="hola" />
+                                <div className="rounded-full bg-acento-2 h-20 w-20 md:h-48 md:w-48 flex items-center justify-center">
+                                    <img className="w-12 md:w-32 select-none" src={item.icon} alt="hola" />
                                 </div>
                                 <div className="w-full pt-4 flex flex-col items-center justify-center">
                                     <h1 className="font-extrabold text-center">{item.title}</h1>

@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-
+import { XIcon } from '@heroicons/react/solid'
 const ButtonComoFunciona = () => {
     let [isOpen, setIsOpen] = useState(false);
 
@@ -28,7 +28,7 @@ const ButtonComoFunciona = () => {
                 className="fixed z-50 inset-0 overflow-y-auto"
                 onClose={handleCloseModal}
                 >
-                <div className="min-h-screen px-10 text-center">
+                <div className="min-h-screen transition bg-black bg-opacity-40 px-10 text-center">
                     <Transition.Child
                     as={Fragment}
                     enter="ease-out duration-300"
@@ -56,11 +56,11 @@ const ButtonComoFunciona = () => {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                     >
-                        <div className="inline-block relative w-full max-w-screen-2xl overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
-                                <div className="w-full flex justify-center">
+                        <div className="inline-block relative w-full max-w-screen-2xl overflow-hidden text-left align-middle transition-all transform bg-black shadow-xl rounded-2xl">
+                                <div className="w-full flex h-full justify-center">
                                     <iframe 
-                                    width="1536" 
-                                    height="780" 
+                                    width="1600" 
+                                    height="800" 
                                     src="https://www.youtube.com/embed/-Cj8NnF3Psg?autoplay=1&showinfo=0&rel=0&modestbranding=0" 
                                     title="YouTube video player" 
                                     frameborder="0" 
@@ -69,10 +69,10 @@ const ButtonComoFunciona = () => {
                                 </div>
                                 <button
                                     type="button"
-                                    className="absolute top-0 left-0 justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                                    className="absolute top-0 left-0 justify-center px-2 py-2 text-acento-2 bg-primario border border-transparent rounded-br-2xl hover:bg-blue-200 focus:outline-none"
                                     onClick={handleCloseModal}
                                 >
-                                    X
+                                    <XIcon aria-hidden="true" className="h-10 w-10" />
                                 </button>
                         </div>
                     </Transition.Child>
