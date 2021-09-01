@@ -3,7 +3,7 @@ import Carousel from '../../components/Carousel';
 
 const ArticleCarousel = () => {
     return (
-        <article className="w-full h-full">
+        <article className="w-full h-96 lg:h-full">
             <Carousel />
         </article>
     )

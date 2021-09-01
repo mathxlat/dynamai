@@ -27,8 +27,8 @@ const testimonios = [
 
 const ArticleTestimoniosQuieroDonar = () => {
     return (
-            <article className="bg-gradient-radial w-full min-h-screen max-h-full from-secundario-2 to-black">
-                <div className="max-w-7xl h-screen relative flex flex-col justify-center items-center mx-auto px-10 py-6">
+            <article className="bg-gradient-radial w-full min-h-full md:min-h-screen max-h-full from-secundario-2 to-black">
+                <div className="max-w-7xl h-full md:h-screen relative flex flex-col justify-center items-center mx-auto px-10 py-6">
                     <div className="-top-32 left-0 w-full hidden md:absolute md:flex justify-around">
                         {testimonios.map( testimonio => (
                             <div key={testimonio.nombre} className="w-72 h-72 mx-2 rounded-lg overflow-hidden bg-gray-300 shadow-lg">
@@ -45,7 +45,7 @@ const ArticleTestimoniosQuieroDonar = () => {
                     <h2 className="text-center text-white">Creemos en un mundo en el que todos puedan desarrollar al
                     máximo su potencial y, así también, contribuir a mejorar la
                     sociedad en su conjunto.</h2>
-                    <ButtonLink text="Quiero donar" to="/quierodonar" className="mt-16" />
+                    <ButtonLink text="Quiero donar" to="/quierodonar" className="mt-10 md:mt-16" />
                 </div>
             </article>
     )

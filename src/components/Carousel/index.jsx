@@ -53,10 +53,10 @@ function Carousel() {
                 <SwiperSlide key={item.title}>
                     <img className="select-none" src={item.img} alt="imagen dynamai" />
                     <div className="select-none">
-                        <p className="text-white uppercase text-4xl w-3/6 font-bold">
+                        <p className="text-white uppercase text-sm md:text-base lg:text-xl xl:text-4xl w-3/4 md:w-3/6 font-bold">
                             {item.title}
                         </p>
-                        <p className="text-white uppercase text-2xl font-normal">
+                        <p className="text-white uppercase text-xs md:text-base lg:text-base xl:text-2xl font-normal">
                             {item.description}
                         </p>
                     </div>
