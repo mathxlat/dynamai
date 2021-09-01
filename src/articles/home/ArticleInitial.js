@@ -1,10 +1,11 @@
 import React from 'react'
 import ButtonComoFunciona from '../../components/ButtonComoFunciona'
 import ButtonLink from '../../components/ButtonLink'
+import YoutubeVideo from '../../components/YoutubeVideo'
 
 const ArticleInitial = () => {
     return (
-        <article className="bg-gradient-radial w-full min-h-screen max-h-full from-secundario-1 to-black">
+        <article className="bg-gradient-radial w-full min-h-full md:min-h-screen max-h-full from-secundario-1 to-black">
         <div className="max-w-7xl mx-auto px-10 py-6">
             <div className="mt-20 max-w-xl">
                 <h1 className="text-white">
@@ -20,8 +21,9 @@ const ArticleInitial = () => {
                 <p className="font-bold text-white">
                     ¡Encontrá más de 400 videos de nutrición, estimulación y cuidados médicos!
                 </p>
-                <div className="flex items-center mt-16">
-                    <ButtonLink text="DESCARGAR LA APP" to="/descargar"/>
+                <div className="flex flex-col sm:flex-row items-center mt-16">
+                    <YoutubeVideo className="flex w-full sm:hidden h-full justify-center mb-6" height="200" />
+                    <ButtonLink className="mb-5 sm:mb-0" text="DESCARGAR LA APP" to="/descargar"/>
                     <ButtonComoFunciona />
                 </div>
             </div>
