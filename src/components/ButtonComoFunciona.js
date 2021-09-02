@@ -22,7 +22,7 @@ const ButtonComoFunciona = () => {
                 onClick={handleOpenModal}
                 className="hidden sm:flex justify-center ml-7 items-center">
                 <img src="/img/icons/play-button.svg" alt="play" className="w-8"/>
-                <p className="text-white ml-3 text-base">Cómo funciona</p>
+                <p className="text-white ml-3 text-base">Presentación del proyecto</p>
             </button>
 
             <Transition appear show={isOpen} as={Fragment}>

@@ -146,7 +146,7 @@ export default function NavBar() {
                               key={item.name}
                               exact to={item.href}
                               activeClassName="text-white text-opacity-100 focus:outline-none"
-                              className="font-nunito w-32 flex transition-all items-center justify-center text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap"
+                              className="font-nunito w-32 flex transition-all items-center justify-center outline-none text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap"
                             >
                                 {item.name}
                             </NavLink>
@@ -174,7 +174,7 @@ export default function NavBar() {
                                   key={item.name}
                                   activeClassName="text-primario"
                                   onClick={() => LinkParticipaRef.current?.click()} 
-                                  className="-m-3 p-3 flex font-nunito border-b border-grey-500 last:border-white font-semibold items-start opacity-80 hover:text-primario">
+                                  className="-m-3 p-3 flex font-nunito border-b border-grey-500 last:border-white font-semibold items-start opacity-80  hover:text-primario">
                                     {item.name}
                                   </NavLink>
                               ))}
