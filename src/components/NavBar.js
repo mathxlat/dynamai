@@ -5,37 +5,44 @@ import { ChevronDownIcon } from '@heroicons/react/solid'
 import { Squash as Hamburger } from 'hamburger-react'
 import SvgLogoDynamai from '../logo'
 import SvgLogoLowDynamai from '../LogoLow'
+import ButtonLink from './ButtonLink';
 
 const navigation = [
     { 
         name: 'Home', 
         href: '/' ,
+        iconDrawer: '/img/icons/drawer/drawer-menu-home.svg',
         mobile: false
     },
     { 
         name: 'Acerca de', 
         href: '/acerca',
+        iconDrawer: '/img/icons/drawer/drawer-menu-acerca-de.svg',
         mobile: false
     },
     { 
         name: 'Participar', 
         href: '/participa',
+        iconDrawer: '/img/icons/drawer/drawer-menu-participar.svg',
         mobile: false,
         submenu: true
     },
     { 
         name: 'Novedades', 
         href: '/novedades',
+        iconDrawer: '/img/icons/drawer/drawer-menu-novedades.svg',
         mobile: false
     },
     { 
         name: 'Quiero donar', 
         href: '/quierodonar',
+        iconDrawer: '/img/icons/drawer/drawer-menu-donar.svg',
         mobile: true
     },
     { 
         name: 'Ayuda y soporte', 
         href: '/ayuda',
+        iconDrawer: '/img/icons/drawer/drawer-menu-soporte.svg',
         mobile: true
     },
 ]
@@ -59,6 +66,8 @@ export default function NavBar() {
   const location = useLocation()
   const [activeLocation, setActiveLocation] = useState('')
   const LinkParticipaRef = useRef();
+  const drawerMenuClose = useRef();
+
   useEffect(()=>{
     setActiveLocation(location.pathname)
   }, [location])
@@ -78,6 +87,14 @@ export default function NavBar() {
   } else {
     hoverNav = 'hidden'
   }
+
+  let drawerParticipa = false;
+  for (const key in participa) {
+    if (activeLocation === participa[key].href) {
+      drawerParticipa = true;
+    }
+  }
+
   return (
     <Disclosure as="nav" className="bg-primario shadow-lg sticky z-40 top-0">
       {({ open }) => (
@@ -87,7 +104,7 @@ export default function NavBar() {
               <div className="flex-1 flex items-center sm:items-stretch justify-between">
                 <div className="flex items-center">
                 <div className="flex items-center focus:outline-none sm:hidden">
-                  <Disclosure.Button className="inline-flex focus:outline-none items-center justify-center p-2 mr-2 rounded-md text-gray-100 hover:text-white hover:bg-green-700 focus:ring-2 focus:ring-inset focus:ring-green-500">
+                  <Disclosure.Button ref={drawerMenuClose} className="inline-flex focus:outline-none items-center justify-center p-2 mr-2 rounded-md text-gray-100 select-none">
                     <span className="sr-only">Abrir menu</span>
                     <Hamburger className="focus:outline-none" 
                     label="Ver menu" 
@@ -122,14 +139,14 @@ export default function NavBar() {
                               key={item.name}
                               exact to={item.href}
                               activeClassName="text-white text-opacity-100 focus:outline-none"
-                              className="font-nunito w-32 flex items-center justify-center text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap"
+                              className="font-nunito w-32 flex transition-all items-center justify-center text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap"
                             >
                                 {item.name}
                             </NavLink>
                           ) 
                         ) : (
                           <Popover key={item.name} className="relative">
-                          <Popover.Button ref={LinkParticipaRef} className="font-nunito w-32 flex items-center justify-center text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap">
+                          <Popover.Button ref={LinkParticipaRef} className="font-nunito w-32 flex transition-all items-center justify-center text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap">
                             <span>{item.name}</span>
                             <ChevronDownIcon aria-hidden="true" className="ml-1 h-5 w-5 group-hover:text-gray-500" />
                           </Popover.Button>
@@ -183,43 +200,61 @@ export default function NavBar() {
             leaveFrom="translate-x-0 opacity-100"
             leaveTo="-translate-x-6 opacity-0"
           >
-            <Disclosure.Panel className="sm:hidden absolute w-4/5">
-              <div className="bg-semiblack h-screen">
+            <Disclosure.Panel className="sm:hidden absolute transition-all w-4/5">
+              <div className="bg-semiblack flex flex-col transition-all h-screen">
                 {navigation.map((item) => (
                   (item.submenu !== true) ? (
                   <NavLink
                       key={item.name}
                       exact to={item.href}
+                      onClick={() => drawerMenuClose.current?.click()} 
                       activeClassName="bg-acento-2 hover:bg-acento-2"
-                      className="text-white text-opacity-80 py-5 hover:bg-acento-2 block px-3 text-base font-medium whitespace-nowrap"
+                      className="text-white text-opacity-80 py-5 transition-all hover:bg-acento-2 flex items-center px-3 text-base font-medium whitespace-nowrap"
                       >
+                      <img className="h-8 mr-3" src={item.iconDrawer} alt={item.name} /> 
                       {item.name}
-                  </NavLink>) : (
+                  </NavLink>
+                  ) : (
                       <Disclosure key={item.name}>
                         {({ open }) => (
                           <>
-                            <Disclosure.Button className="flex justify-between w-full text-white text-opacity-80 py-5 px-3 text-base font-medium whitespace-nowrap">
-                              <span>{item.name}</span>
+                            <Disclosure.Button className={`flex justify-between items-center w-full text-white text-opacity-80 py-5 px-3 text-base font-medium whitespace-nowrap ${ drawerParticipa ? 'bg-acento-2' : 'bg-semiblack' }`}>
+                              <div className="flex items-center ">
+                                <img className="h-8 mr-3" src={item.iconDrawer} alt={item.name} /> 
+                                <span>{item.name}</span>
+                              </div>
                               <ChevronDownIcon 
                               aria-hidden="true" 
                               className={`ml-1 h-5 w-5 group-hover:text-gray-500 transition-all ${ open ? 'transform rotate-180' : '' }`} />
                             </Disclosure.Button>
-                            <Disclosure.Panel>
-                              {participa.map( item => (
-                                <NavLink 
-                                  key={item.name}
-                                  exact to={item.href}
-                                  activeClassName="bg-acento-2"
-                                  className="text-white text-opacity-80 py-5 px-3 pl-5 bg-gray-900 hover:bg-acento-2 block text-base font-medium whitespace-nowrap">
-                                    {item.name}
-                                </NavLink>
-                              ) )}
-                            </Disclosure.Panel>
+                            <Transition
+                              show={open}
+                              enter="transition duration-100 ease-out"
+                              enterFrom="transform -translate-y-6 opacity-0"
+                              enterTo="transform translate-y-0 opacity-100"
+                              leave="transition duration-75 ease-out"
+                              leaveFrom="transform translate-y-0 opacity-100"
+                              leaveTo="transform -translate-y-6 opacity-0"
+                            >
+                              <Disclosure.Panel>
+                                {participa.map( item => (
+                                  <NavLink 
+                                    key={item.name}
+                                    exact to={item.href}
+                                    onClick={() => drawerMenuClose.current?.click()} 
+                                    activeClassName="bg-acento-2"
+                                    className="text-white text-opacity-80 py-5 px-3 pl-14  hover:bg-acento-2 block text-base font-medium whitespace-nowrap">
+                                      {item.name}
+                                  </NavLink>
+                                ) )}
+                              </Disclosure.Panel>
+                            </Transition>
                           </>
                         )}
                       </Disclosure>
-                  )
-                ))}
+                    ))
+                  )}
+                  <ButtonLink to='/descargar' text="DESCARGAR APP" className="mx-auto transition-all mt-8" />
               </div>
             </Disclosure.Panel>
           </Transition>
