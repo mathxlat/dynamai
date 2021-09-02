@@ -4,15 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primario": "#208849",
+        "semiblack": "#333333",
+        "primario": "#184329",
         "secundario-1": "#7147B1",
         "secundario-2": "#499BA2",
         "acento-1": "#B9536E",
         "acento-2": "#8AB356"
       },
       textColor: {
-        "semiblack": "#333",
-        "primario": "#208849",
+        "semiblack": "#333333",
+        "primario": "#184329",
         "secundario-1": "#7147B1",
         "secundario-2": "#499BA2",
         "acento-1": "#B9536E",

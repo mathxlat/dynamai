@@ -16,12 +16,21 @@ const navigation = [
         href: '/acerca' 
     },
     { 
-        name: 'Participa', 
-        href: '/participa' 
+        name: 'Participar', 
+        href: '/participa',
+        submenu: true
     },
     { 
         name: 'Novedades', 
-        href: '/novedades' 
+        href: '/novedades',
+    },
+    { 
+        name: 'Quiero donar', 
+        href: '/quierodonar' 
+    },
+    { 
+        name: 'Ayuda y soporte', 
+        href: '/ayuda' 
     },
 ]
 
@@ -67,16 +76,16 @@ export default function NavBar() {
     <Disclosure as="nav" className="bg-primario shadow-lg sticky z-40 top-0">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-6 py-5 sm:px-6 md:px-4 lg:px-8">
+          <div className="max-w-7xl mx-auto px-6 py-4 md:py-5 sm:px-6 md:px-4 lg:px-8">
             <div className="relative flex items-center justify-between h-10 sm:h-12 md:h-16">
               <div className="flex-1 flex items-center sm:items-stretch justify-between">
                 <div className="flex items-center">
                 <div className="flex items-center focus:outline-none sm:hidden">
-                  <Disclosure.Button className="inline-flex focus:outline-none items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:bg-green-700 focus:ring-2 focus:ring-inset focus:ring-green-500">
+                  <Disclosure.Button className="inline-flex focus:outline-none items-center justify-center p-2 mr-2 rounded-md text-gray-100 hover:text-white hover:bg-green-700 focus:ring-2 focus:ring-inset focus:ring-green-500">
                     <span className="sr-only">Abrir menu</span>
                     <Hamburger className="focus:outline-none" 
                     label="Ver menu" 
-                    size={32} 
+                    size={30} 
                     rounded={true} 
                     toggled={open}
                     distance="xl"
@@ -85,7 +94,7 @@ export default function NavBar() {
                 </div>
                   <Link to="/" className="flex-shrink-0 flex items-center">
                     <SvgLogoLowDynamai className="hidden sm:block lg:hidden h-14 md:h-16 w-auto" alt="Logo Dynamai" />
-                    <SvgLogoDynamai className="block sm:hidden lg:block h-14 md:h-16 w-auto" alt="Logo Dynamai" />
+                    <SvgLogoDynamai className="block sm:hidden lg:block h-12 md:h-16 w-auto" alt="Logo Dynamai" />
                   </Link>
                 </div>
                 <div className="flex items-center focus:outline-none sm:hidden">
@@ -166,25 +175,51 @@ export default function NavBar() {
               </div>
             </div>
           </div>
+
           <Transition
             enter="transition duration-150 ease-out transform"
-            enterFrom="-translate-y-6 opacity-0"
-            enterTo="translate-y-0 opacity-100" 
+            enterFrom="-translate-x-6 opacity-0"
+            enterTo="translate-x-0 opacity-100" 
             leave="transition duration-150 ease-out transform"
-            leaveFrom="translate-y-0 opacity-100"
-            leaveTo="-translate-y-6 opacity-0"
+            leaveFrom="translate-x-0 opacity-100"
+            leaveTo="-translate-x-6 opacity-0"
           >
-            <Disclosure.Panel className="sm:hidden absolute w-full">
-              <div className="px-2 pt-2 pb-3 space-y-1 bg-primario">
+            <Disclosure.Panel className="sm:hidden absolute w-4/5">
+              <div className="bg-semiblack h-screen">
                 {navigation.map((item) => (
+                  (item.submenu !== true) ? (
                   <NavLink
                       key={item.name}
                       exact to={item.href}
-                      activeClassName="text-green-400 bg-green-900 hover:text-green-400 hover:bg-green-900"
-                      className="text-gray-300 hover:text-white hover:bg-green-700 block px-3 py-2 rounded-md text-base font-medium whitespace-nowrap"
+                      activeClassName="bg-acento-2 hover:bg-acento-2"
+                      className="text-white text-opacity-80 py-5 hover:bg-acento-2 block px-3 text-base font-medium whitespace-nowrap"
                       >
                       {item.name}
-                  </NavLink>
+                  </NavLink>) : (
+                      <Disclosure key={item.name}>
+                        {({ open }) => (
+                          <>
+                            <Disclosure.Button className="flex justify-between w-full text-white text-opacity-80 py-5 px-3 text-base font-medium whitespace-nowrap">
+                              <span>{item.name}</span>
+                              <ChevronDownIcon 
+                              aria-hidden="true" 
+                              className={`ml-1 h-5 w-5 group-hover:text-gray-500 transition-all ${ open ? 'transform rotate-180' : '' }`} />
+                            </Disclosure.Button>
+                            <Disclosure.Panel>
+                              {participa.map( item => (
+                                <NavLink 
+                                  key={item.name}
+                                  exact to={item.href}
+                                  activeClassName="bg-acento-2"
+                                  className="text-white text-opacity-80 py-5 px-3 pl-5 bg-gray-900 hover:bg-acento-2 block text-base font-medium whitespace-nowrap">
+                                    {item.name}
+                                </NavLink>
+                              ) )}
+                            </Disclosure.Panel>
+                          </>
+                        )}
+                      </Disclosure>
+                  )
                 ))}
               </div>
             </Disclosure.Panel>

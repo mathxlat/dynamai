@@ -34,7 +34,7 @@ const ArticleBeneficiarios = () => {
                                     <img className="w-12 md:w-32 select-none" src={item.icon} alt="hola" />
                                 </div>
                                 <div className="w-full pt-4 flex flex-col items-center justify-center">
-                                    <h1 className="font-extrabold text-center">{item.title}</h1>
+                                    <p className="font-extrabold text-center text-base md:text-5xl">{item.title}</p>
                                     <p className="w-full text-center">{item.content}</p>
                                 </div>
                             </div>
