@@ -9,28 +9,34 @@ import SvgLogoLowDynamai from '../LogoLow'
 const navigation = [
     { 
         name: 'Home', 
-        href: '/' 
+        href: '/' ,
+        mobile: false
     },
     { 
         name: 'Acerca de', 
-        href: '/acerca' 
+        href: '/acerca',
+        mobile: false
     },
     { 
         name: 'Participar', 
         href: '/participa',
+        mobile: false,
         submenu: true
     },
     { 
         name: 'Novedades', 
         href: '/novedades',
+        mobile: false
     },
     { 
         name: 'Quiero donar', 
-        href: '/quierodonar' 
+        href: '/quierodonar',
+        mobile: true
     },
     { 
         name: 'Ayuda y soporte', 
-        href: '/ayuda' 
+        href: '/ayuda',
+        mobile: true
     },
 ]
 
@@ -108,24 +114,23 @@ export default function NavBar() {
                 <div className="hidden sm:flex w-full justify-end items-center">
                   <div className="select-none max-w-prose">
                     <div className="flex relative max-w-prose focus:outline-none">
-                      <NavLink
-                        exact to="/"
-                        activeClassName="text-white text-opacity-100 focus:outline-none"
-                        className="font-nunito w-32 flex items-center justify-center text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap"
-                      >
-                        HOME
-                      </NavLink>
-                      <NavLink
-                        exact to="/acerca"
-                        activeClassName="text-white text-opacity-100 focus:outline-none"
-                        className="font-nunito w-32 flex items-center justify-center text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap"
-                      >
-                        ACERCA DE
-                      </NavLink>
 
-                      <Popover className="relative">
+                      {navigation.map( item => (
+                        (item.submenu !== true) ? (
+                          (item.mobile === false) && (
+                            <NavLink
+                              key={item.name}
+                              exact to={item.href}
+                              activeClassName="text-white text-opacity-100 focus:outline-none"
+                              className="font-nunito w-32 flex items-center justify-center text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap"
+                            >
+                                {item.name}
+                            </NavLink>
+                          ) 
+                        ) : (
+                          <Popover key={item.name} className="relative">
                           <Popover.Button ref={LinkParticipaRef} className="font-nunito w-32 flex items-center justify-center text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap">
-                            <span>PARTICIPA</span>
+                            <span>{item.name}</span>
                             <ChevronDownIcon aria-hidden="true" className="ml-1 h-5 w-5 group-hover:text-gray-500" />
                           </Popover.Button>
                           <Transition
@@ -154,14 +159,8 @@ export default function NavBar() {
                           </Popover.Panel>
                         </Transition>
                       </Popover>
-
-                      <NavLink
-                        exact to="/novedades"
-                        activeClassName="text-white text-opacity-100 focus:outline-none"
-                        className="font-nunito w-32 flex items-center justify-center text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap"
-                      >
-                        NOVEDADES
-                      </NavLink>
+                        )
+                      ) )}
                       <div className={`${hoverNav} w-32 transition-all duration-300 bottom-0 h-1 bg-acento-2 absolute`}></div>
                     </div>
                   </div>

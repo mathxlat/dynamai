@@ -1,17 +1,18 @@
 import React from 'react'
 
 const YoutubeVideo = ({ 
-    src = "https://www.youtube.com/embed/-Cj8NnF3Psg?autoplay=1&showinfo=0&rel=0&modestbranding=0", 
+    autoplay = true, 
     className = {}, 
     height = '800', 
-    width = '1600'
+    width = '1600',
+
 }) => {
     return (
         <div className={className}>
             <iframe 
             width={width}
             height={height} 
-            src={src}
+            src={`https://www.youtube.com/embed/-Cj8NnF3Psg?autoplay=${ autoplay ? '1' : '0' }&showinfo=0&rel=0&modestbranding=0`}
             title="YouTube video player" 
             frameBorder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  />

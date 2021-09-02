@@ -22,7 +22,7 @@ const ArticleInitial = () => {
                     ¡Encontrá más de 400 videos de nutrición, estimulación y cuidados médicos!
                 </p>
                 <div className="flex flex-col sm:flex-row items-center mt-7 md:mt-16">
-                    <YoutubeVideo className="flex w-full sm:hidden h-full justify-center mb-6" height="200" />
+                    <YoutubeVideo autoplay={false} className="flex w-full sm:hidden h-full justify-center mb-6" height="200" />
                     <ButtonLink className="mb-5 sm:mb-0" text="DESCARGAR LA APP" to="/descargar"/>
                     <ButtonComoFunciona />
                 </div>
