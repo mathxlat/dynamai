@@ -62,15 +62,22 @@ const participa = [
     },
 ]
 
+const onClickUp = () => {
+  window.scrollTo(0,0)
+}
+
 export default function NavBar() {
   const location = useLocation()
   const [activeLocation, setActiveLocation] = useState('')
   const LinkParticipaRef = useRef();
   const drawerMenuClose = useRef();
 
+  
   useEffect(()=>{
     setActiveLocation(location.pathname)
+    onClickUp()
   }, [location])
+
   let hoverNav;
   if(activeLocation === navigation[0].href){
     hoverNav = 'left-0';
