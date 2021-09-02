@@ -153,7 +153,7 @@ export default function NavBar() {
                           ) 
                         ) : (
                           <Popover key={item.name} className="relative">
-                          <Popover.Button ref={LinkParticipaRef} className="font-nunito w-32 flex transition-all items-center justify-center text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap">
+                          <Popover.Button ref={LinkParticipaRef} className="font-nunito w-32 flex transition-all outline-none items-center justify-center text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap">
                             <span>{item.name}</span>
                             <ChevronDownIcon aria-hidden="true" className="ml-1 h-5 w-5 group-hover:text-gray-500" />
                           </Popover.Button>
