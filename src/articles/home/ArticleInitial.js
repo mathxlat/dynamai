@@ -6,7 +6,7 @@ import YoutubeVideo from '../../components/YoutubeVideo'
 const ArticleInitial = () => {
     return (
         <article className="bg-gradient-radial w-full min-h-full md:min-h-screen max-h-full from-secundario-1 to-black">
-        <div className="max-w-7xl mx-auto px-10 py-6">
+        <div className="max-w-7xl mx-auto px-5 sm:px-10 py-6">
             <div className="mt-2 md:mt-20 max-w-xl">
                 <h1 className="text-white">
                     Acompañamos a
@@ -21,8 +21,15 @@ const ArticleInitial = () => {
                 <p className="font-bold text-white">
                     ¡Encontrá más de 400 videos de nutrición, estimulación y cuidados médicos!
                 </p>
-                <div className="flex flex-col sm:flex-row items-center mt-7 md:mt-16">
-                    <YoutubeVideo autoplay={false} className="flex w-full sm:hidden h-full justify-center mb-6" height="200" />
+                <YoutubeVideo autoplay={false} className="flex w-full sm:hidden h-full mt-4 justify-center mb-4" height="190" />
+                <div className="flex w-full justify-center sm:justify-start">
+                    <img
+                        className="h-14 sm:h-16 mt-0 sm:mt-3 select-none"
+                        src="/img/download/google-play.png" 
+                        alt="google play" 
+                    />
+                </div>
+                <div className="flex flex-col sm:flex-row items-center mt-2 md:mt-4">
                     <ButtonLink className="mb-5 sm:mb-0" text="DESCARGAR LA APP" to="/descargar"/>
                     <ButtonComoFunciona />
                 </div>

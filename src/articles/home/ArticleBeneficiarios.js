@@ -21,9 +21,9 @@ const infoBeneficiarios = [
 const ArticleBeneficiarios = () => {
     return (
         <article className="w-full min-h-max md:min-h-screen max-h-max">
-                <div className="max-w-7xl mx-auto px-10 py-0">
+                <div className="max-w-7xl mx-auto px-5 sm:px-10 py-0">
                     <div className="mt-5 md:mt-20">
-                        <p className="text-semiblack font-bold text-base md:text-4xl">
+                        <p className="text-semiblack font-bold text-xl md:text-4xl">
                             Para quienes hacemos Dýnamai
                         </p>
                         <div className="flex flex-row items-start flex-nowrap pt-0 md:pt-10 w-full justify-between">
@@ -35,7 +35,7 @@ const ArticleBeneficiarios = () => {
                                 </div>
                                 <div className="w-full pt-4 flex flex-col items-center justify-center">
                                     <p className="font-extrabold text-center text-base md:text-5xl">{item.title}</p>
-                                    <p className="w-full text-center">{item.content}</p>
+                                    <p className="w-full text-sm sm:text-2xl text-center">{item.content}</p>
                                 </div>
                             </div>
                             ))

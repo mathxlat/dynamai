@@ -63,7 +63,7 @@ const ButtonComoFunciona = () => {
                                 <YoutubeVideo className="w-full flex h-full justify-center" />
                                 <button
                                     type="button"
-                                    className="absolute top-0 left-0 justify-center px-2 py-2 text-acento-2 bg-primario border border-transparent rounded-br-2xl hover:bg-blue-200 focus:outline-none"
+                                    className="absolute top-0 left-0 justify-center px-2 py-2 text-acento-2 bg-primario border border-transparent rounded-br-2xl focus:outline-none"
                                     onClick={handleCloseModal}
                                 >
                                     <XIcon aria-hidden="true" className="h-10 w-10" />
