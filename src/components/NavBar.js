@@ -4,7 +4,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import { Squash as Hamburger } from 'hamburger-react'
 import SvgLogoDynamai from '../logo'
-import SvgLogoLowDynamai from '../LogoLow'
+import SvgLogoDynamaiText from '../logoText'
 import ButtonLink from './ButtonLink';
 
 const navigation = [
@@ -35,15 +35,16 @@ const navigation = [
     },
     { 
         name: 'Quiero donar', 
-        href: '/quierodonar',
+        href: '/donar',
         iconDrawer: '/img/icons/drawer/drawer-menu-donar.svg',
         mobile: true
     },
     { 
         name: 'Ayuda y soporte', 
-        href: '/ayuda',
+        href: 'https://wa.me/message/QQZZDV4XAYPBP1',
         iconDrawer: '/img/icons/drawer/drawer-menu-soporte.svg',
-        mobile: true
+        mobile: true,
+        ext: true
     },
 ]
 
@@ -116,11 +117,11 @@ export default function NavBar() {
     <Disclosure as="nav" className="bg-primario shadow-lg sticky z-40 top-0">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 py-4 md:py-5 sm:px-6 md:px-4 lg:px-8">
+          <div className="max-w-7xl mx-auto px-2 py-3 md:py-4 sm:px-6 md:px-4 lg:px-8">
             <div className="relative flex items-center justify-between h-10 sm:h-12 md:h-16">
               <div className="flex-1 flex items-center sm:items-stretch justify-between">
                 <div className="flex items-center">
-                <div className="flex items-center focus:outline-none sm:hidden">
+                <div className="flex items-center focus:outline-none md:hidden">
                   <Disclosure.Button ref={drawerMenuClose} className="inline-flex focus:outline-none items-center justify-center p-2 mr-2 rounded-md text-gray-100 select-none">
                     <span className="sr-only">Abrir menu</span>
                     <Hamburger className="focus:outline-none" 
@@ -129,27 +130,27 @@ export default function NavBar() {
                     rounded={true} 
                     toggled={open}
                     distance="xl"
+                    hideOutline={false}
                     />
                   </Disclosure.Button>
                 </div>
-                  <Link to="/" className="flex-shrink-0 flex items-center">
-                    <SvgLogoLowDynamai className="hidden sm:block lg:hidden h-14 md:h-16 w-auto" alt="Logo Dynamai" />
+                  <Link to="/" className="flex-shrink-0 flex items-center" onClick={() => isOpenDrawer(open)}>
                     <SvgLogoDynamai 
-                      onClick={() => isOpenDrawer(open)}
-                      className="block sm:hidden lg:block h-12 md:h-16 w-auto" 
+                      className="block filter drop-shadow-sm sm:drop-shadow-md h-16 md:h-32 w-auto transform md:translate-y-7" 
                       alt="Logo Dynamai" />
+                    <SvgLogoDynamaiText className="block md:hidden lg:block h-24 md:h-32 w-auto" alt="Logo Dynamai" />
                   </Link>
                 </div>
-                <div className="flex items-center focus:outline-none sm:hidden">
+                <div className="flex items-center focus:outline-none md:hidden">
                   <Link
-                        to="/quierodonar"
+                        to="/donar"
                         onClick={() => isOpenDrawer(open)}
                         className="flex items-center transition justify-center px-4 mx-2 py-2 border border-transparent rounded-full shadow-sm text-base font-medium uppercase tracking-wider text-secundario-1 bg-white hover:bg-gray-900"
                         >
                         Donar
                   </Link>
                 </div>
-                <div className="hidden sm:flex w-full justify-end items-center">
+                <div className="hidden md:flex w-full justify-end items-center">
                   <div className="select-none max-w-prose">
                     <div className="flex relative max-w-prose focus:outline-none">
 
@@ -160,14 +161,14 @@ export default function NavBar() {
                               key={item.name}
                               exact to={item.href}
                               activeClassName="text-white text-opacity-100 focus:outline-none"
-                              className="font-nunito w-32 flex transition-all items-center justify-center outline-none text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap"
+                              className="font-nunito w-32 flex transition-all items-center justify-center outline-none text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-9 text-xs md:text-base uppercase font-semibold whitespace-nowrap"
                             >
                                 {item.name}
                             </NavLink>
                           ) 
                         ) : (
                           <Popover key={item.name} className="relative">
-                          <Popover.Button ref={LinkParticipaRef} className="font-nunito w-32 flex transition-all outline-none items-center justify-center text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-10 text-xs md:text-base uppercase font-semibold whitespace-nowrap">
+                          <Popover.Button ref={LinkParticipaRef} className="font-nunito w-32 flex transition-all outline-none items-center justify-center text-white text-opacity-90 hover:text-opacity-100 focus:outline-none hover:bg-white hover:bg-opacity-5 py-9 text-xs md:text-base uppercase font-semibold whitespace-nowrap">
                             <span>{item.name}</span>
                             <ChevronDownIcon aria-hidden="true" className="ml-1 h-5 w-5 group-hover:text-gray-500" />
                           </Popover.Button>
@@ -188,7 +189,7 @@ export default function NavBar() {
                                   key={item.name}
                                   activeClassName="bg-acento-2"
                                   onClick={() => LinkParticipaRef.current?.click()} 
-                                  className="-m-4 p-3 pl-10 text-white flex font-nunito border-b border-gray-800 last:border-semiblack font-semibold items-start opacity-80  hover:bg-acento-2">
+                                  className="-m-4 p-3 pl-10 text-white flex font-nunito border-b border-gray-800 last:border-transparent font-semibold items-start opacity-80  hover:bg-acento-2">
                                     {item.name}
                                   </NavLink>
                               ))}
@@ -199,14 +200,20 @@ export default function NavBar() {
                       </Popover>
                         )
                       ) )}
-                      <div className={`${hoverNav} w-32 transition-all duration-300 bottom-0 h-1 bg-acento-2 absolute`}></div>
+                      <div className={`${hoverNav} w-32 transition-all duration-300 bottom-0 h-2 bg-acento-2 absolute`}></div>
                     </div>
                   </div>
                   <Link 
-                    to='/quierodonar'
-                    className="hidden sm:flex justify-center items-center sm:ml-6 font-nunito font-semibold text-base uppercase bg-white hover:bg-gray-900 text-secundario-1 hover:text-white px-6 py-2 shadow hover:shadow-lg tracking-wider transition rounded-full whitespace-nowrap cursor-pointer"
+                    to='/donar'
+                    className="hidden md:hidden lg:flex justify-center items-center sm:ml-6 font-nunito font-semibold text-base uppercase bg-white hover:bg-gray-900 text-secundario-1 hover:text-white px-6 py-2 shadow hover:shadow-lg tracking-wider transition rounded-full whitespace-nowrap cursor-pointer"
                     >
                       Quiero Donar
+                  </Link>
+                  <Link 
+                    to='/donar'
+                    className="hidden md:flex lg:hidden justify-center items-center sm:ml-6 font-nunito font-semibold text-base uppercase bg-white hover:bg-gray-900 text-secundario-1 hover:text-white px-3 py-2 shadow hover:shadow-lg tracking-wider transition rounded-full whitespace-nowrap cursor-pointer"
+                    >
+                      Donar
                   </Link>
                 </div>
               </div>
@@ -221,20 +228,31 @@ export default function NavBar() {
             leaveFrom="translate-x-0 opacity-100"
             leaveTo="-translate-x-6 opacity-0"
           >
-            <Disclosure.Panel className="sm:hidden absolute transition-all w-4/5">
+            <Disclosure.Panel className="md:hidden absolute transition-all w-4/5">
               <div className="bg-semiblack flex flex-col transition-all h-screen">
                 {navigation.map((item) => (
                   (item.submenu !== true) ? (
-                  <NavLink
-                      key={item.name}
-                      exact to={item.href}
-                      onClick={() => drawerMenuClose.current?.click()} 
-                      activeClassName="bg-acento-2 hover:bg-acento-2"
-                      className="text-white text-opacity-80 py-5 transition-all hover:bg-acento-2 flex items-center px-3 text-base font-medium whitespace-nowrap"
-                      >
-                      <img className="h-8 ml-3 mr-6" src={item.iconDrawer} alt={item.name} /> 
-                      {item.name}
-                  </NavLink>
+                    (item.ext !== true) ? (
+                      <NavLink
+                          key={item.name}
+                          exact to={item.href}
+                          onClick={() => drawerMenuClose.current?.click()} 
+                          activeClassName="bg-acento-2 hover:bg-acento-2"
+                          className="text-white text-opacity-80 py-5 transition-all hover:bg-acento-2 flex items-center px-3 text-base font-medium whitespace-nowrap"
+                          >
+                          <img className="h-8 ml-3 mr-6" src={item.iconDrawer} alt={item.name} /> 
+                          {item.name}
+                      </NavLink>) : (
+                      <a 
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => drawerMenuClose.current?.click()}
+                        className="text-white text-opacity-80 py-5 transition-all hover:bg-acento-2 flex items-center px-3 text-base font-medium whitespace-nowrap"
+                        >
+                        <img className="h-8 ml-3 mr-6" src={item.iconDrawer} alt={item.name} /> 
+                        {item.name}
+                      </a>
+                  )
                   ) : (
                       <Disclosure key={item.name}>
                         {({ open }) => (

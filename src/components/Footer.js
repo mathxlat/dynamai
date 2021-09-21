@@ -12,7 +12,7 @@ const redes = [
         icon: "/img/redes/facebook.svg"
     },
     {
-        link: "esto es un link",
+        link: "https://www.youtube.com/channel/UCWrniZqHjb3EL0qcFSI-tlQ",
         name: "YouTube",
         icon: "/img/redes/youtube.svg"
     },
@@ -44,7 +44,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col xl:flex-row max-w-7xl mx-auto justify-between items-center sm:items-start px-10 py-5">
                     {infoFooter.map( item => (
-                        <p key={item.content} className="font-nunito text-xs sm:text-lg whitespace-nowrap sm:font-semibold text-white">{item.content}</p>
+                        <p key={item.content} className="font-nunito text-xs sm:text-lg text-center sm:font-semibold text-white">{item.content}</p>
                     ) )}
                 </div>
             </div>

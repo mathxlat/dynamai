@@ -32,11 +32,19 @@ module.exports = {
         '3xl': '1600px',
         '4xl': '1700px',
       },
+      maxWidth: {
+        'mobile-mock-gif': '13.6rem',
+        'mobile-mock': '24rem',
+        'mobile-screen-fx': '28rem'
+      }
     },
   },
   variants: {
     extend: {
       borderColor: ['last'],
+      boxShadow: ['active'],
+      width: ['last'],
+      height: ['last'],
     },
   },
   plugins: [],

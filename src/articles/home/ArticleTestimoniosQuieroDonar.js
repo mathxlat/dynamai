@@ -45,7 +45,7 @@ const ArticleTestimoniosQuieroDonar = () => {
                     <h2 className="text-center text-white">Creemos en un mundo en el que todos puedan desarrollar al
                     máximo su potencial y, así también, contribuir a mejorar la
                     sociedad en su conjunto.</h2>
-                    <ButtonLink text="Quiero donar" to="/quierodonar" className="mt-10 md:mt-16" />
+                    <ButtonLink text="Quiero donar" to="/donar" className="mt-10 md:mt-16" />
                 </div>
             </article>
     )

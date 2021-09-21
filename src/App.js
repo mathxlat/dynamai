@@ -4,6 +4,8 @@ import Error404 from './pages/Error404';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import BtnWsp from './components/BtnWsp';
+import Donar from './pages/Donar';
+import Novedades from './pages/Novedades';
 
 function App() {
   return (
@@ -25,11 +27,15 @@ function App() {
         </Route>
 
         <Route path='/novedades'>
-          <Error404 />
+          <Novedades />
         </Route>
         
         <Route path='/contacto'>
           <Error404 />
+        </Route>
+
+        <Route path='/donar'>
+          <Donar />
         </Route>
 
         <Route path='*'>

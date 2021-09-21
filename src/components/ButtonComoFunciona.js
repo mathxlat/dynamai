@@ -20,9 +20,11 @@ const ButtonComoFunciona = () => {
             <button 
                 type="button" 
                 onClick={handleOpenModal}
-                className="hidden sm:flex justify-center ml-7 items-center">
+                className="hidden sm:flex justify-center ml-7 lg:ml-5 xl:ml-7 items-center">
                 <img src="/img/icons/play-button.svg" alt="play" className="w-8"/>
-                <p className="text-white ml-3 text-base">Presentación del proyecto</p>
+                <p className="text-white ml-3 text-lg lg:text-sm xl:text-xl">
+                    Conocé mas de Dýnamai
+                </p>
             </button>
 
             <Transition appear show={isOpen} as={Fragment}>

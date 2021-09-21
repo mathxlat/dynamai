@@ -6,8 +6,8 @@ import YoutubeVideo from '../../components/YoutubeVideo'
 const ArticleInitial = () => {
     return (
         <article className="bg-gradient-radial w-full min-h-full md:min-h-screen max-h-full from-secundario-1 to-black">
-        <div className="max-w-7xl mx-auto px-5 sm:px-10 py-6">
-            <div className="mt-2 md:mt-20 max-w-xl">
+        <div className="md:flex max-w-7xl mx-auto px-5 sm:px-10 py-6">
+            <div className="mt-2 md:mt-16 max-w-xl lg:max-w-mobile-screen-fx xl:max-w-xl">
                 <h1 className="text-white">
                     Acompañamos a
                     madres y padres
@@ -30,9 +30,23 @@ const ArticleInitial = () => {
                     />
                 </div>
                 <div className="flex flex-col sm:flex-row items-center mt-2 md:mt-4">
-                    <ButtonLink className="mb-5 sm:mb-0" text="DESCARGAR LA APP" to="/descargar"/>
+                    <ButtonLink className="mb-5 lg:w-30 xl:w-56 sm:mb-0" text="DESCARGAR LA APP" to="/descargar"/>
                     <ButtonComoFunciona />
                 </div>
+            </div>
+            <div className="hidden lg:flex top-12 relative justify-center pr-48 w-full overflow-hidden">
+                <img className="absolute max-w-3xl -top-4 transform translate-x-48" 
+                    src="/img/mock/mock-mobile-back.png" 
+                    alt="mock mobile" 
+                />
+                <img className="absolute max-w-mobile-mock-gif top-20 rounded-3xl overflow-hidden"
+                    src="/gifs/gif-inicio.gif" 
+                    alt="Gif dynamai" 
+                />
+                <img className="absolute max-w-mobile-mock top-4" 
+                    src="/img/mock/mock-mobile.png" 
+                    alt="mock mobile" 
+                />
             </div>
         </div>
     </article>
