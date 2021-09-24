@@ -1,5 +1,6 @@
 import { Disclosure, Transition } from '@headlessui/react';
 import React from 'react'
+import { Helmet } from 'react-helmet';
 
 const data = [
     {
@@ -130,6 +131,12 @@ const RightTimeline = ( { date, valor = false } ) => (
 
 function Novedades() {
     return (
+        <>
+        <Helmet>
+
+            <title>Dýnamai - Novedades</title>
+
+        </Helmet>
         <main>
             <article className="bg-gradient-radial w-full min-h-full md:min-h-screen max-h-full from-secundario-2 to-black">
                 <div className="max-w-7xl mx-auto px-5 sm:px-10 py-6">
@@ -178,6 +185,7 @@ function Novedades() {
                 </div>
             </article>
         </main>
+        </>
     )
 }
 

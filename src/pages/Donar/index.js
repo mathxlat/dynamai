@@ -1,5 +1,6 @@
 import React from 'react'
-import ComponenteDonarLink from '../components/ComponenteDonarLink';
+import ComponenteDonarLink from '../../components/ComponenteDonarLink';
+import { Helmet } from 'react-helmet';
 
 const donarMensualmente = [
     {
@@ -68,6 +69,12 @@ const donacionesData = [
 
 function Donar() {
     return (
+        <>
+        <Helmet>
+
+            <title>Dýnamai - Donar</title>
+
+        </Helmet>
         <main>
             <article className="bg-gradient-radial w-full min-h-full md:min-h-screen max-h-full from-secundario-1 to-black">
                 <div className="max-w-7xl mx-auto px-5 sm:px-10 py-6 pb-0">
@@ -95,6 +102,7 @@ function Donar() {
                 />
             </article>
         </main>
+        </>
     )
 }
 
