@@ -36,16 +36,16 @@ const ArticleInitial = () => {
             </div>
             <div className="hidden lg:flex top-12 relative justify-center pr-48 w-full overflow-hidden">
                 <img className="absolute max-w-3xl -top-4 transform translate-x-48" 
-                    src="/img/mock/mock-mobile-back.png" 
-                    alt="mock mobile" 
+                    src="/img/mock/mock-mobile-back.webp" 
+                    alt="Mock Mobile Dynamai App 1" 
                 />
                 <img className="absolute max-w-mobile-mock-gif top-20 rounded-3xl overflow-hidden"
-                    src="/gifs/gif-inicio.gif" 
-                    alt="Gif dynamai" 
+                    src="/gifs/gif-inicio-v.webp" 
+                    alt="Gif Dynamai App"
                 />
                 <img className="absolute max-w-mobile-mock top-4" 
-                    src="/img/mock/mock-mobile.png" 
-                    alt="mock mobile" 
+                    src="/img/mock/mock-mobile.webp" 
+                    alt="Mock Mobile Dynamai App 2" 
                 />
             </div>
         </div>
