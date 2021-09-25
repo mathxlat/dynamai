@@ -1,0 +1,16 @@
+.info--wrap{
+    border: 2.5px solid #ffff;
+    border-radius: 5rem;
+    width: 500px;
+    margin-bottom: 3rem;
+
+    .info--wrap_text{
+        color: #ffff;
+        word-spacing: 0.25em;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        text-align: center;
+    }
+}

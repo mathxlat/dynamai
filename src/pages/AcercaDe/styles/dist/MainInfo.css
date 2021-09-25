@@ -1,0 +1,31 @@
+.main--info {
+  display: flex;
+  justify-content: space-between;
+  background-color: #428C8C;
+}
+.main--info .info--left {
+  width: 30%;
+  margin-left: 18%;
+  margin-top: 5%;
+  margin-bottom: 8%;
+}
+.main--info .info--left .info--titles {
+  margin-bottom: 3%;
+  color: #ffff;
+}
+.main--info .info--left .info--text {
+  margin-bottom: 5%;
+  color: #ffff;
+}
+.main--info .info--right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 20%;
+  margin-right: 18%;
+  margin-top: 5%;
+}
+.main--info .info--right #info2 {
+  position: relative;
+  right: 100px;
+}

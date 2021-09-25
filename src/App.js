@@ -1,6 +1,7 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Error404 from './pages/Error404';
+import { About } from './pages/AcercaDe/About';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import BtnWsp from './components/BtnWsp';
@@ -11,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
         <NavBar />
-        <BtnWsp />
+        <BtnWsp />  
       <Switch>
 
         <Route exact path='/'>
@@ -19,7 +20,7 @@ function App() {
         </Route>
 
         <Route path='/acerca'>
-          <Error404 />
+         <About />
         </Route>
 
         <Route path='/participa'>
