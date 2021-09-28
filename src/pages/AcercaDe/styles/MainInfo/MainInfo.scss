@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     background-color: #428C8C;
+  
 
     .info--left{
         width: 30%;
@@ -15,6 +16,7 @@
         .info--text{
             margin-bottom: 5%;
             color: #ffff;
+            opacity: 80%;
         }
        
     }
@@ -22,12 +24,33 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        width: 20%;
-        margin-right: 18%;
+        width: 40%;
+        margin-left: 15%;
+        margin-right: 15%;
         margin-top: 5%;
+        .quote{
+            font-size: 0.8rem;
+            color: #fff;
+            opacity: 80%;
+
+        }
         #info2{
             position: relative;
             right: 100px;
         }
+       
     }
+}
+@media screen and (max-width:1220px) {
+    .main--info{
+        flex-direction: column;
+        .info--left{
+            width: 70%;
+        }
+        .info--right{
+            margin-left: 30%;
+            width: 60%;
+        }
+    }
+    
 }

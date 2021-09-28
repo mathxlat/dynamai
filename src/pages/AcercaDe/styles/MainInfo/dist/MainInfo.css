@@ -16,16 +16,36 @@
 .main--info .info--left .info--text {
   margin-bottom: 5%;
   color: #ffff;
+  opacity: 80%;
 }
 .main--info .info--right {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 20%;
-  margin-right: 18%;
+  width: 40%;
+  margin-left: 15%;
+  margin-right: 15%;
   margin-top: 5%;
+}
+.main--info .info--right .quote {
+  font-size: 0.8rem;
+  color: #fff;
+  opacity: 80%;
 }
 .main--info .info--right #info2 {
   position: relative;
   right: 100px;
+}
+
+@media screen and (max-width: 1220px) {
+  .main--info {
+    flex-direction: column;
+  }
+  .main--info .info--left {
+    width: 70%;
+  }
+  .main--info .info--right {
+    margin-left: 30%;
+    width: 60%;
+  }
 }

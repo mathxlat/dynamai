@@ -1,0 +1,47 @@
+.quienesSomos--wrap{
+    width: 100%;
+    position: relative;
+
+   h2{
+        position:absolute;
+        top:0;
+        margin-top: 3%;
+        margin-left: 3%;
+        color:#fff; 
+   }
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.quienesAcompanan--wrap{
+    margin-left: 18%;
+    .empresas{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .empresa{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            img{
+                border: 1px solid black;
+                height: 150px;
+                width: 150px;
+                margin:5%;
+                border-radius: 50%;
+            }
+            h4{
+                width: 50%;
+                font-weight: bold;
+            }
+            p{
+                width: 70%;
+                font-size: 1em;
+            }
+        }
+    }
+}

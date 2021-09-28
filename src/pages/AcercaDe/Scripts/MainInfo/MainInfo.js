@@ -1,5 +1,5 @@
-import { InfoPhrases } from "./InfoPhrases"
-import './styles/dist/MainInfo.css'
+import '../../styles/MainInfo/dist/MainInfo.css'
+import {InfoPhrases} from '../MainInfo/InfoPhrases'
 import { useState } from "react"
 
 export const MainInfo = () => {
@@ -28,14 +28,15 @@ const[info, setInfo] = useState([
             </div>
             <div className='info--vision'>
                 <h3 className='info--titles'>NUESTRO PROPOSITO Y VISION</h3>
-                <p className='info--titles'>Acompañar a madres y padres en la tarea de criar a sus hijos, acercando todos los conocimientos y herramientas que necesiten durante el embarazo e infancia, de forma didáctica y aplicable.</p>
-                <p className='info--titles'>Creemos en un mundo en el que todos puedan desarrollar al máximo su potencial y, así tambien, contribuir a mejorar la sociedad en su conjunto.</p>
+                <p className='info--text'>Acompañar a madres y padres en la tarea de criar a sus hijos, acercando todos los conocimientos y herramientas que necesiten durante el embarazo e infancia, de forma didáctica y aplicable.</p>
+                <p className='info--text'>Creemos en un mundo en el que todos puedan desarrollar al máximo su potencial y, así tambien, contribuir a mejorar la sociedad en su conjunto.</p>
             </div>
             </div>
             <div className='info--right'>
                 {
                 info.map(info => <InfoPhrases info={info.content} id={info.id}></InfoPhrases>)
                 }
+                <p className='quote'>(*citas de la inicitiva del G20 por el desarrollo de la primera infancia.)</p>
             </div>
         </div>
     )

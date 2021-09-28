@@ -1,4 +1,4 @@
-import './styles/dist/InfoPhrases.css'
+import '../../styles/MainInfo/dist/InfoPhrases.css'
 
 export const InfoPhrases = ({info, id}) => {
 

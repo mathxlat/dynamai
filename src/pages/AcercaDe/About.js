@@ -1,7 +1,13 @@
-import { MainInfo } from "./MainInfo"
+import { Fragment } from "react"
+import {MainInfo} from './Scripts/MainInfo/MainInfo'
+import { TargetArticle } from "./Scripts/TargetArticle/TargetArticle"
 
-export const About = (params) => {
+export const About = () => {
     return(
-        <MainInfo></MainInfo>
+        <Fragment>
+            <MainInfo />
+            <TargetArticle />
+        </Fragment>
+
     )
 }

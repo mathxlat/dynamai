@@ -1,0 +1,37 @@
+.propuesta--wrap{
+    display: flex;
+    align-items: center;
+    background: #6344A6;
+    .propuesta--info{
+        width: 40%;
+    
+    .propuesta--title{
+        margin-bottom: 3%;
+        color:#fff;
+    }
+    .propuesta--main_text{
+        margin-bottom: 5%;
+        color:#fff;
+
+    }
+    .propuesta--secondary_text{
+        margin-bottom: 4%;
+        color:#fff;
+
+    }
+}
+.diferenciales--wrap{
+    display: flex;
+    margin-bottom: 3%;
+    align-items: center;
+    .diferenciales--img{
+        width: 30px;
+        height: 30px;
+        margin-right: 3%;
+    }
+    .diferenciales--text{
+        color:#fff;
+
+    }
+}
+}
