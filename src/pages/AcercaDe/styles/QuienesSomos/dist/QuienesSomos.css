@@ -31,16 +31,35 @@
 }
 .quienesAcompanan--wrap .empresas .empresa img {
   border: 1px solid black;
-  height: 150px;
-  width: 150px;
-  margin: 5%;
+  height: 40%;
+  width: 40%;
   border-radius: 50%;
 }
 .quienesAcompanan--wrap .empresas .empresa h4 {
-  width: 50%;
+  width: 60%;
   font-weight: bold;
 }
 .quienesAcompanan--wrap .empresas .empresa p {
   width: 70%;
   font-size: 1em;
+}
+
+@media screen and (max-width: 1000px) {
+  .quienesAcompanan--wrap {
+    margin: 0;
+  }
+  .quienesAcompanan--wrap .empresas #fundacionHorizonte {
+    display: none;
+  }
+  .quienesAcompanan--wrap .empresas .empresa img {
+    width: 60%;
+    height: 60%;
+  }
+  .quienesAcompanan--wrap .empresas .empresa h4 {
+    width: 100%;
+    margin-top: 5%;
+  }
+  .quienesAcompanan--wrap .empresas .empresa p {
+    width: 80%;
+  }
 }

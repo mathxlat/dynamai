@@ -31,3 +31,14 @@
 .propuesta--wrap .diferenciales--wrap .diferenciales--text {
   color: #fff;
 }
+
+@media screen and (max-width: 1220px) {
+  .propuesta--wrap .propuesta--app {
+    display: none;
+  }
+  .propuesta--wrap .propuesta--info {
+    width: 80%;
+    margin-left: 18%;
+    margin-top: 3%;
+  }
+}

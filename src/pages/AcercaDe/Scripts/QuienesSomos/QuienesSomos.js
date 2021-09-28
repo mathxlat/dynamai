@@ -24,7 +24,7 @@ export const QuienesSomos = () => {
               <h4>Sirius</h4>
               <p>Soluciones de Software</p>
           </div>
-          <div className='empresa'>
+          <div className='empresa' id='fundacionHorizonte'>
               <img src='/img/Png/mother.png'></img>
               <h4>Dynamai App es un emprendimiento de la fundación Horizonte de Máxima</h4>
               <p>fundacion</p>

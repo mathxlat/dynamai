@@ -32,14 +32,18 @@
             margin-bottom: 3%;
         }
     }
-    .bloques--grafico3_wrap{
+    .bloques--grafico3_wrap{    
         display: flex;
         justify-content: space-between;
         align-items: center;
       
         .bloques--grafico3{
             margin-left: 18%;
-            width: 60%;
+            width: 40%;
+            height: 10%;
+        }
+        .bloques--mother{
+            width: 30%;
             height: 30%;
         }
     }

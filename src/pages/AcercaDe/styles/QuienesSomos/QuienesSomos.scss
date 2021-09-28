@@ -29,13 +29,12 @@
             align-items: center;
             img{
                 border: 1px solid black;
-                height: 150px;
-                width: 150px;
-                margin:5%;
+                height: 40%;
+                width: 40%;
                 border-radius: 50%;
             }
             h4{
-                width: 50%;
+                width: 60%;
                 font-weight: bold;
             }
             p{
@@ -45,3 +44,32 @@
         }
     }
 }
+@media screen and(max-width:1000px) {
+    
+    .quienesAcompanan--wrap{
+        margin: 0;
+        .empresas{
+
+            #fundacionHorizonte{
+                display: none;
+               
+                }
+                .empresa{
+
+                    img{
+                        width: 60%;
+                        height: 60%;
+                    }
+                    h4{
+                        width: 100%;
+                        margin-top: 5%;
+                    }
+                    p{
+                        width:80%;
+                    }
+            }
+        
+        }
+        }
+    }
+    
