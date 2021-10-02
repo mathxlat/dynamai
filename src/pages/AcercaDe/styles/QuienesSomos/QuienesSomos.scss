@@ -16,7 +16,12 @@
     }
 }
 .quienesAcompanan--wrap{
-    margin-left: 18%;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    .quienesAcompanan--title{
+        margin-bottom: 2%;
+    }
     .empresas{
         display: flex;
         align-items: center;
@@ -27,8 +32,15 @@
             justify-content: center;
             text-align: center;
             align-items: center;
+            .sirius--image{
+                width: 150px;
+                height: 150px;
+            }
+            .horizonte--maxima_image{
+                width: 50%;
+                height: 50%;
+            }
             img{
-                border: 1px solid black;
                 height: 40%;
                 width: 40%;
                 border-radius: 50%;
@@ -56,9 +68,14 @@
                 }
                 .empresa{
 
+                    .sirius--image{
+                        width: 5rem;
+                        height: 5rem;
+                    }
+                    
                     img{
-                        width: 60%;
-                        height: 60%;
+                        width: 40%;
+                        height: 40%;
                     }
                     h4{
                         width: 100%;

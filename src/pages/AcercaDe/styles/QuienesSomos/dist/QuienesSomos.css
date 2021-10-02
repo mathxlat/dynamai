@@ -15,7 +15,12 @@
 }
 
 .quienesAcompanan--wrap {
-  margin-left: 18%;
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.quienesAcompanan--wrap .quienesAcompanan--title {
+  margin-bottom: 2%;
 }
 .quienesAcompanan--wrap .empresas {
   display: flex;
@@ -29,8 +34,15 @@
   text-align: center;
   align-items: center;
 }
+.quienesAcompanan--wrap .empresas .empresa .sirius--image {
+  width: 150px;
+  height: 150px;
+}
+.quienesAcompanan--wrap .empresas .empresa .horizonte--maxima_image {
+  width: 50%;
+  height: 50%;
+}
 .quienesAcompanan--wrap .empresas .empresa img {
-  border: 1px solid black;
   height: 40%;
   width: 40%;
   border-radius: 50%;
@@ -51,9 +63,13 @@
   .quienesAcompanan--wrap .empresas #fundacionHorizonte {
     display: none;
   }
+  .quienesAcompanan--wrap .empresas .empresa .sirius--image {
+    width: 5rem;
+    height: 5rem;
+  }
   .quienesAcompanan--wrap .empresas .empresa img {
-    width: 60%;
-    height: 60%;
+    width: 40%;
+    height: 40%;
   }
   .quienesAcompanan--wrap .empresas .empresa h4 {
     width: 100%;

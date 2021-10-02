@@ -4,12 +4,27 @@
     .bloques--title{
         margin-left: 18%;
     }
+    .primer--bloque_wrap{
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+        .bloques--mothers{
+            position: absolute;
+            right: -5%;
+            height: 80%;
+            width: 20%;
+            filter: opacity(1);
+            opacity: 0.4;
+        }
     .bloques--grafico1{
         width: 40%;
         height: 10%;
         margin-left: 20%;
         margin-top: 3%;
     }
+}
     .bloques--title2{
         align-self: flex-end;
         margin-right: 5%;
@@ -50,8 +65,18 @@
 }
 @media screen and(max-width:1200px){
     .bloques--wrap{
+        .primer--bloque_wrap{
+            .bloques--mothers{
+                display: none;
+            }
+        }
         .bloques--title2{
+            font-size: 0.8rem;
             margin-left: 18%;
+        }
+        .bloques--title{
+            font-size: 0.9rem;
+
         }
         .bloques--grafico1{
             width: 70%;
