@@ -4,7 +4,7 @@ import { useState } from "react"
 
 export const MainInfo = () => {
 
-const[info, setInfo] = useState([
+const[info ] = useState([
 {
     id:'info1',
     content:'"Las habilidades cognitivas y socio-emocionales fundamentales son adquiridas en la niñez"',
