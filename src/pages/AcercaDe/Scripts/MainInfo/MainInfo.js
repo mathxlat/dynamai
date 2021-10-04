@@ -1,10 +1,9 @@
 import '../../styles/MainInfo/dist/MainInfo.css'
 import {InfoPhrases} from '../MainInfo/InfoPhrases'
-import { useState } from "react"
 
 export const MainInfo = () => {
 
-const[info ] = useState([
+const info = [
 {
     id:'info1',
     content:'"Las habilidades cognitivas y socio-emocionales fundamentales son adquiridas en la niñez"',
@@ -17,7 +16,7 @@ const[info ] = useState([
     id:'info3',
     content:'"Los responsables de la crianza necesitan ser empoderados por medio del acceso a la información"'
 }
-])
+]
 
     return(
         <div className='main--info'>
