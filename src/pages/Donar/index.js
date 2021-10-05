@@ -20,7 +20,7 @@ const donarMensualmente = [
         href: 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380847b629336017be4acb1dd66d2'
     },
     {
-        valor: 'Otro',
+        valor: 'Otro Monto',
         href: 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=fbdb28c8d77c4c3280b1991dfe2f98bb'
     }
 ];
@@ -43,8 +43,8 @@ const donarUnicaVez = [
         href: 'https://www.mercadopago.com.ar/checkout/v1/redirect?preference-id=209229376-ab425b04-b34d-482e-b437-90aaf0591dca'
     },
     {
-        valor: 'Otro',
-        href: ''
+        valor: 'Otro Monto',
+        href: 'mailto:elcorreoquequieres@correo.com?Subject=Otro%20Monto%20asunto%20del%20mail'
     }
 ];
 
