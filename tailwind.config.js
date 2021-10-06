@@ -36,6 +36,9 @@ module.exports = {
         'mobile-mock-gif': '13.6rem',
         'mobile-mock': '24rem',
         'mobile-screen-fx': '28rem'
+      },
+      width: {
+        'card-novedades': '34rem'
       }
     },
   },

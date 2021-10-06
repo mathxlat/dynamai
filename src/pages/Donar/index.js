@@ -44,7 +44,7 @@ const donarUnicaVez = [
     },
     {
         valor: 'Otro Monto',
-        href: 'mailto:elcorreoquequieres@correo.com?Subject=Otro%20Monto%20asunto%20del%20mail'
+        href: 'mailto:contacto@dynamaiapp.org?Subject=Donación%20única%20Dynamai'
     }
 ];
 
