@@ -3,7 +3,7 @@ import DateToFormat from './DateToFormat';
 
 const RightTimeline = ( { field } ) => {
     const { fields } = field
-    const { titulo, descripcion, date, imagen, url_texto, url } = fields
+    const { titulo, descripcion, date, imagen = [{ url:'' }], url_texto = 'Ir al enlace', url } = fields
 
     return(
     <Disclosure as="div" className="relative w-full md:w-1/2 self-end">
@@ -62,9 +62,12 @@ const RightTimeline = ( { field } ) => {
                 <Disclosure.Panel className={`flex flex-col max-w-full sm:max-w-lg md:max-w-full md:pt-0 md:py-6 justify-between items-start md:items-center relative transition-all duration-300 ease-in-out ${ open ? 'h-full' : 'h-0' }`}>
                         <p className="p-3 w-full md:py-0 md:p-8 text-base font-normal">
                             { descripcion }
-                            <a href={url} className="text-secundario-2 ml-1">
-                                { url_texto }
-                            </a>
+                            {
+                                url && 
+                                    <a href={url} className="text-secundario-2 ml-1">
+                                        {url_texto}
+                                    </a>
+                            }
                         </p>
                 </Disclosure.Panel>
             </Transition>
