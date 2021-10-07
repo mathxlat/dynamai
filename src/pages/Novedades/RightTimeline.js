@@ -3,7 +3,7 @@ import DateToFormat from './DateToFormat';
 
 const RightTimeline = ( { field } ) => {
     const { fields } = field
-    const { titulo, descripcion, date, imagen = [{ url:'' }], url_texto = 'Ir al enlace', url } = fields
+    const { titulo, descripcion, fecha, imagen = [{ url:'' }], url_texto = 'Ir al enlace', url } = fields
 
     return(
     <Disclosure as="div" className="relative w-full md:w-1/2 self-end">
@@ -24,7 +24,7 @@ const RightTimeline = ( { field } ) => {
 
             <div className="flex flex-col transition bg-white order-1 md:mt-4 mb-20 ml-14 md:ml-8 md:mr-6 w-full max-w-full md:max-w-sm xl:max-w-md relative rounded-xl shadow-xl md:shadow-2xl overflow-hidden">
                 <div className="flex md:flex-col">
-                    <DateToFormat date={date} />
+                    <DateToFormat date={fecha} />
                     <img className="w-28 h-32 md:w-card-novedades md:h-56 object-cover"
                         src={imagen[0].url} 
                         alt="novedades" 
