@@ -12,7 +12,7 @@ function Novedades() {
     const [novedades, setNovedadades] = useState([])
 
     useEffect(() => {
-        base('novedades').select({view: 'novedades' }).eachPage((records, fetchNextPage) => {
+        base('novedades').select({view: 'Novedades' }).eachPage((records, fetchNextPage) => {
             setNovedadades(records);
             fetchNextPage();
         })
