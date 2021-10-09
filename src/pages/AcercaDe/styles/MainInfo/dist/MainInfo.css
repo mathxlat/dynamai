@@ -16,7 +16,6 @@
 .main--info .info--left .info--text {
   margin-bottom: 5%;
   color: #ffff;
-  opacity: 80%;
 }
 .main--info .info--right {
   display: flex;
@@ -30,7 +29,6 @@
 .main--info .info--right .quote {
   font-size: 0.8rem;
   color: #fff;
-  opacity: 80%;
 }
 .main--info .info--right #info2 {
   position: relative;
