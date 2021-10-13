@@ -6,7 +6,7 @@ dayjs.locale(es);
 
 dayjs.extend(localizedFormat);
 
-const DateToFormat = ({date}) => {
+export const DateToFormat = ({date}) => {
     const dateToFormat = dayjs(date).format('LL').split(' ')
     const dateMes = dateToFormat[2]
     const dateAño = dateToFormat[4]
@@ -17,4 +17,39 @@ const DateToFormat = ({date}) => {
     )
 }
 
-export default DateToFormat;
+export const DateToYear = ({date, color}) => {
+    const dateToFormat = dayjs(date).format('LL').split(' ')
+    const dateAño = dateToFormat[4]
+    return(
+        <p className={`text-base ${ color }`}>
+            {dateAño}
+        </p>
+    )
+}
+
+export const DateToNew = ( novedades = [] ) => {
+    const años = novedades.map( ({id, fields}) => {
+        const dateToFormat = dayjs(fields.fecha).format('LL').split(' ')
+        const dateAño = dateToFormat[4]
+        return {dateAño, id};
+    })
+
+    const setObj = new Set();
+
+    const unicos = años.reverse().reduce((acc, año) => {
+      if (!setObj.has(año.dateAño)){
+        setObj.add(año.dateAño, año)
+        acc.push(año)
+      }
+      return acc;
+    },[]);
+    
+    return unicos;
+}
+
+
+export const DateToYearFunction = ( date ) => {
+    const dateToFormat = dayjs(date).format('LL').split(' ')
+    const dateAño = dateToFormat[4]
+    return dateAño;
+}

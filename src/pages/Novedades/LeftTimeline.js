@@ -1,25 +1,47 @@
-import { Disclosure, Transition } from '@headlessui/react';
-import DateToFormat from './DateToFormat';
+import { Disclosure } from '@headlessui/react';
+import { useEffect, useState } from 'react';
+import { DateToFormat, DateToYear, DateToYearFunction } from './DateToFormat';
 
 
-const LeftTimeline = ( { field } ) => {
+const LeftTimeline = ( { field, dateToNew } ) => {
+    const [unico, setUnico] = useState(false)
     const { fields } = field
     const { titulo, descripcion, fecha, imagen = [{ url:'' }], url_texto = 'Ir al enlace', url } = fields
+
+    useEffect(()=>{
+        
+        dateToNew.forEach( ({dateAño, id}, index) => {
+            if ( dateAño === DateToYearFunction(fecha) ) {
+                if( id === field.id ){
+                    if ( !(0 === index) ){
+                        setUnico(true)
+                    }
+                }
+            }
+        })
+        
+    }, [dateToNew,fecha,field.id ])
+
+    let fechaColor = false;
+
+    if ( parseInt(DateToYearFunction(fecha)) % 2 === 0 ) {
+        fechaColor = true;
+    }
+
     return(
     <Disclosure as="div" className="relative w-full md:w-1/2">
         {({ open }) => (
             <div className="flex max-w-full relative">
-            <div className="flex absolute items-center order-1 left-2 md:left-full md:-ml-4 top-0 bg-acento-2 shadow-xl min-w-max w-8 h-8 md:w-10 md:h-10 rounded-full">
+            <div className={`flex absolute items-center order-1 left-2 md:left-full md:-ml-4 top-0 shadow-xl min-w-max w-8 h-8 md:w-10 md:h-10 rounded-full ${ fechaColor ? 'bg-acento-2' : 'bg-acento-1' }`}>
             </div>
+            
+            { unico ? (
+                <div className="flex justify-center items-center absolute order-1 left-1 md:-ml-7 md:left-full top-1/2 bg-white shadow-xl w-10 h-10 md:w-16 md:h-16 rounded-full">
+                    <DateToYear date={ fecha } color={ fechaColor ? 'text-acento-2' : 'text-acento-1' } />
+                </div>
+            ) : null}
 
-            {/* {valor && 
-                (
-                    <div className="flex justify-center items-center absolute order-1 -right-9 top-2/3 bg-white shadow-xl w-16 h-16 rounded-full">
-                        <p className="text-base text-acento-2">
-                            2021
-                        </p>
-                    </div>
-                )} */}
+
 
             <div className="flex flex-col transition bg-white order-1 md:mt-4 mb-20 ml-14 md:ml-0 md:mr-6 w-full max-w-full md:max-w-sm xl:max-w-md relative rounded-xl shadow-xl md:shadow-2xl overflow-hidden">
                 <div className="flex md:flex-col">
@@ -49,15 +71,7 @@ const LeftTimeline = ( { field } ) => {
                         </Disclosure.Button>
                     </div>
                 </div>
-                <Transition
-                    show={open}
-                    enter="transition duration-100 ease-out transform"
-                    enterFrom="opacity-0"
-                    enterTo="opacity-100"
-                    leave="transition duration-100 ease-out transform"
-                    leaveFrom="opacity-100"
-                    leaveTo="opacity-0"
-                >
+
                 <Disclosure.Panel className={`flex flex-col max-w-full sm:max-w-lg md:max-w-full md:pt-0 md:py-6 justify-between items-start md:items-center relative transition-all duration-300 ease-in-out ${ open ? 'h-full' : 'h-0' }`}>
                         <p className="p-3 w-full md:py-0 md:p-8 text-base font-normal">
                             {descripcion}
@@ -69,7 +83,6 @@ const LeftTimeline = ( { field } ) => {
                             }
                         </p>
                 </Disclosure.Panel>
-            </Transition>
             </div>
         </div>
     )}
