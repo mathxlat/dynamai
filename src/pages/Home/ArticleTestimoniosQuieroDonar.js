@@ -4,33 +4,43 @@ import ButtonLink from '../../components/ButtonLink';
 const testimonios = [
     {
         img: "/img/carrousel/carrousel1.png",
-        nombre: "Nombre Apellido",
+        nombre: "Nombre Apellido 1",
         testimonio: "“Testimonio”"
     },
     {
         img: "/img/carrousel/carrousel2.png",
-        nombre: "Nombre Apellido",
+        nombre: "Nombre Apellido 2 ",
         testimonio: "“Testimonio”"
     },
     {
         img: "/img/carrousel/carrousel3.png",
-        nombre: "Nombre Apellido",
+        nombre: "Nombre Apellido 3",
         testimonio: "“Testimonio”"
     },
     {
         img: "/img/carrousel/carrousel4.png",
-        nombre: "Nombre Apellido",
+        nombre: "Nombre Apellido 4",
+        testimonio: "“Testimonio”"
+    }
+    ,
+    {
+        img: "/img/carrousel/carrousel4.png",
+        nombre: "Nombre Apellido 5",
         testimonio: "“Testimonio”"
     }
 ]
 
+testimonios.sort(() => Math.random() - 0.5 );
+
+const testimoniosRecortados = testimonios.splice( 0, 4 );
 
 const ArticleTestimoniosQuieroDonar = () => {
     return (
             <article className="bg-gradient-radial w-full min-h-full md:min-h-screen max-h-full from-secundario-2 to-black">
                 <div className="max-w-7xl h-full md:h-screen relative flex flex-col justify-center items-center mx-auto px-5 sm:px-10 py-6">
                     <div className="-top-32 left-0 w-full hidden md:absolute md:flex justify-around">
-                        {testimonios.map( testimonio => (
+                        { testimonios ?
+                        testimoniosRecortados.map( testimonio => (
                             <div key={testimonio.nombre} className="w-72 h-72 mx-2 rounded-lg overflow-hidden bg-gray-300 shadow-lg">
                                 <div className="h-40">
                                     <img className="w-full h-40 object-cover" src={testimonio.img} alt={testimonio.testimonio} />
@@ -40,7 +50,8 @@ const ArticleTestimoniosQuieroDonar = () => {
                                     <small>{testimonio.testimonio}</small>
                                 </div>
                             </div>
-                        ) )}
+                        )) : null
+                        }
                     </div>
                     <h2 className="text-center text-white">Creemos en un mundo en el que todos puedan desarrollar al
                     máximo su potencial y, así también, contribuir a mejorar la

@@ -4,16 +4,18 @@ import base from '../../airtable/airtable.base'
 import { DateToNew } from './DateToFormat';
 import LeftTimeline from './LeftTimeline';
 import RightTimeline from './RightTimeline';
-
-import { SpinnerCircular } from 'spinners-react';
+import { Loading } from '../../components/Loading';
+import { NovedadesVacio } from './NovedadesVacio';
 
 function Novedades() {
     const [novedades, setNovedadades] = useState([]);
     const [dateToNew, setDateToNew] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         base('Novedades').select({view: 'Novedades' }).eachPage((records, fetchNextPage) => {
             setNovedadades(records);
+            setLoading(false);
             fetchNextPage();
         });
     }, [])
@@ -34,20 +36,9 @@ function Novedades() {
     }
     
 
-    if( !novedades.length ) return (
-    <>
-        <Helmet>
+    if( loading) return <Loading className="from-secundario-2 to-black pb-48" />
 
-            <title>Dýnamai - Cargando</title>
-
-        </Helmet>
-        <main>
-            <article className="flex justify-center items-center justify-items-center bg-gradient-radial w-full min-h-screen max-h-full from-secundario-2 to-black">
-                <SpinnerCircular size={50} thickness={180} speed={180} color="#36ad47" secondaryColor="rgba(0, 0, 0, 0.44)" />
-            </article>
-        </main>
-    </>
-    )
+    if (!novedades.length) return <NovedadesVacio />
 
     return (
         <>
