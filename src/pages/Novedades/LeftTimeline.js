@@ -29,7 +29,7 @@ const LeftTimeline = ( { field, dateToNew } ) => {
     }
 
     return(
-    <Disclosure as="div" className={`relative w-full pb-20 md:w-1/2 ${ unico ? 'pb-20 md:pb-0' : ''}`}>
+    <Disclosure as="div" className={`relative w-full md:w-1/2 ${ unico ? 'pb-20 md:pb-0' : ''}`}>
         {({ open }) => (
             <div className="flex max-w-full relative">
             <div className={`flex absolute items-center order-1 left-2 md:left-full md:-ml-4 top-0 shadow-xl min-w-max w-8 h-8 md:w-10 md:h-10 rounded-full ${ fechaColor ? 'bg-acento-2' : 'bg-acento-1' }`}>
