@@ -5,7 +5,7 @@ import { ChevronDownIcon } from '@heroicons/react/solid'
 import { Squash as Hamburger } from 'hamburger-react'
 import SvgLogoDynamai from '../logo'
 import SvgLogoDynamaiText from '../logoText'
-import ButtonLink from './ButtonLink';
+import Button from './Button';
 
 const navigation = [
     { 
@@ -293,7 +293,7 @@ export default function NavBar() {
                       </Disclosure>
                     ))
                   )}
-                  <ButtonLink to='/descargar' text="DESCARGAR APP" className="mx-auto transition-all mt-8" />
+                  <Button href="https://play.google.com/store/apps/details?id=com.dynamai&hl=es_AR&gl=US" text="DESCARGAR APP" className="mx-auto transition-all mt-8" />
               </div>
             </Disclosure.Panel>
           </Transition>

@@ -1,7 +1,7 @@
 import React from 'react'
 import ButtonComoFunciona from '../../components/ButtonComoFunciona'
-import ButtonLink from '../../components/ButtonLink'
 import YoutubeVideo from '../../components/YoutubeVideo'
+import Button from './../../components/Button';
 
 const ArticleInitial = () => {
     return (
@@ -30,7 +30,7 @@ const ArticleInitial = () => {
                     />
                 </div>
                 <div className="flex flex-col sm:flex-row items-center mt-2 md:mt-4">
-                    <ButtonLink className="mb-5 lg:w-30 xl:w-56 sm:mb-0" text="DESCARGAR LA APP" to="/descargar"/>
+                    <Button href="https://play.google.com/store/apps/details?id=com.dynamai&hl=es_AR&gl=US" className="mb-5 lg:w-30 xl:w-56 sm:mb-0" text="DESCARGAR LA APP"/>
                     <ButtonComoFunciona />
                 </div>
             </div>
