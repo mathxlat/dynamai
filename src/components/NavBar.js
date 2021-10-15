@@ -293,7 +293,7 @@ export default function NavBar() {
                       </Disclosure>
                     ))
                   )}
-                  <Button href="https://play.google.com/store/apps/details?id=com.dynamai&hl=es_AR&gl=US" text="DESCARGAR APP" className="mx-auto transition-all mt-8" />
+                  <Button href="https://play.google.com/store/apps/details?id=com.dynamai&hl=es_AR&gl=US" target="_blank" rel="noreferrer" text="DESCARGAR APP" className="mx-auto transition-all mt-8" />
               </div>
             </Disclosure.Panel>
           </Transition>

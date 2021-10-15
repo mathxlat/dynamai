@@ -11,7 +11,7 @@ export const DateToFormat = ({date}) => {
     const dateMes = dateToFormat[2]
     const dateAño = dateToFormat[4]
     return(
-        <p className="absolute uppercase font-bold md:font-normal text-base text-secundario-1 md:text-white top-2 md:top-5 right-2 md:right-5">
+        <p className="absolute md:static md:pt-4 md:pl-8 md:-mb-4 uppercase font-bold text-base text-secundario-1 top-2 md:top-5 right-2 md:right-5">
             {dateMes} | {dateAño}
         </p>
     )

@@ -45,11 +45,11 @@ const LeftTimeline = ( { field, dateToNew } ) => {
 
             <div className="flex flex-col transition bg-white order-1 md:mt-4 mb-20 ml-14 md:ml-0 md:mr-6 w-full max-w-full md:max-w-sm xl:max-w-md relative rounded-xl shadow-xl md:shadow-2xl overflow-hidden">
                 <div className="flex md:flex-col">
-                    <DateToFormat date={fecha} />
                     <img className="w-28 h-32 md:w-card-novedades md:h-56 object-cover"
                         src={imagen[0].url} 
                         alt="novedades" 
                     />
+                    <DateToFormat date={fecha} />
                     <div className="flex flex-row w-full pt-6 md:px-5 md:pt-0 md:flex-row justify-between items-start md:items-center relative">
                         <p className="w-full p-3 py-3 md:p-3 md:py-5 text-base font-bold uppercase">
                             {titulo}
