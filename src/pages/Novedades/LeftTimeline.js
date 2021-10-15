@@ -29,14 +29,14 @@ const LeftTimeline = ( { field, dateToNew } ) => {
     }
 
     return(
-    <Disclosure as="div" className="relative w-full md:w-1/2">
+    <Disclosure as="div" className={`relative w-full pb-20 md:w-1/2 ${ unico ? 'pb-20 md:pb-0' : ''}`}>
         {({ open }) => (
             <div className="flex max-w-full relative">
             <div className={`flex absolute items-center order-1 left-2 md:left-full md:-ml-4 top-0 shadow-xl min-w-max w-8 h-8 md:w-10 md:h-10 rounded-full ${ fechaColor ? 'bg-acento-2' : 'bg-acento-1' }`}>
             </div>
             
             { unico ? (
-                <div className="flex justify-center items-center absolute order-1 left-1 md:-ml-7 md:left-full top-1/2 bg-white shadow-xl w-10 h-10 md:w-16 md:h-16 rounded-full">
+                <div className="flex transform translate-y-3/4 md:-translate-y-1/4 justify-center items-center absolute order-1 left-0 md:-ml-7 md:left-full top-2/3 md:top-1/2 bg-white shadow-xl w-12 h-12 md:w-16 md:h-16 rounded-full">
                     <DateToYear date={ fecha } color={ fechaColor ? 'text-acento-2' : 'text-acento-1' } />
                 </div>
             ) : null}

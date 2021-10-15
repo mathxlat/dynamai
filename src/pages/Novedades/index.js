@@ -79,8 +79,8 @@ function Novedades() {
 
                             <div className="relative md:w-1/2">
                                 <div className="flex justify-start md:justify-end w-full">
-                                    <div className="flex relative justify-center items-center order-1 -right-1 md:-right-9 top-2 bg-white shadow-xl w-10 h-10 md:w-16 md:h-16 rounded-full">
-                                        <small className={`font-semibold ${colorFinal ? 'text-acento-2' : 'text-acento-1'}`}>{dateToNew[0]?.dateAño}</small>
+                                    <div className="flex relative justify-center items-center order-1 -right-0 md:-right-9 top-2 bg-white shadow-xl w-12 h-12 md:w-16 md:h-16 rounded-full">
+                                        <small className={`font-semibold not-italic ${colorFinal ? 'text-acento-2' : 'text-acento-1'}`}>{dateToNew[0]?.dateAño}</small>
                                     </div>
                                 </div>
                             </div>

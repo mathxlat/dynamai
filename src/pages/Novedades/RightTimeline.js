@@ -28,7 +28,7 @@ const RightTimeline = ( { field, dateToNew  } ) => {
     }
 
     return(
-    <Disclosure as="div" className="relative w-full md:w-1/2 self-end">
+    <Disclosure as="div" className={`relative w-full md:w-1/2 self-end ${ unico ? 'pb-20 md:pb-0' : ''}`}>
         {({ open }) => (
 
             <div className="flex md:justify-end max-w-full relative">
@@ -36,7 +36,7 @@ const RightTimeline = ( { field, dateToNew  } ) => {
             </div>
 
             { unico ? (
-                <div className="flex justify-center items-center absolute order-1 left-1 md:left-0 md:-ml-7 top-1/2 bg-white shadow-xl w-10 h-10 md:w-16 md:h-16 rounded-full">
+                <div className="flex transform translate-y-3/4 md:-translate-y-1/4 justify-center items-center absolute order-1 left-0 md:left-0 md:-ml-7 top-2/3 md:top-1/2 bg-white shadow-xl w-12 h-12 md:w-16 md:h-16 rounded-full">
                     <DateToYear date={ fecha } color={ fechaColor ? 'text-acento-2' : 'text-acento-1' } />
                 </div>
             ) : null}
