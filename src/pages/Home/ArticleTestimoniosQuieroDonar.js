@@ -44,7 +44,6 @@ const ArticleTestimoniosQuieroDonar = () => {
                                     <img className="w-full h-40 object-cover" src={testimonio.fields.imagen[0].url} alt={testimonio.testimonio} />
                                 </div>
                                 <div className="w-full h-full p-3 bg-white">
-                                    {console.log(testimonio.fields.imagen.url)}
                                     <p className="capitalize">
                                         {testimonio.fields.nombre}
                                     </p>
