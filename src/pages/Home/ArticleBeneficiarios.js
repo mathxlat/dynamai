@@ -31,7 +31,7 @@ const ArticleBeneficiarios = () => {
                             infoBeneficiarios.map( item => (
                             <div key={item.title} className="w-full py-8 flex flex-col items-center">
                                 <div className="rounded-full bg-acento-2 h-20 w-20 md:h-48 md:w-48 flex items-center justify-center">
-                                    <img className="w-12 md:w-32 select-none" src={item.icon} alt="hola" />
+                                    <img className="w-12 md:w-32 select-none" src={item.icon} alt={item.title} />
                                 </div>
                                 <div className="w-full pt-4 flex flex-col items-center justify-center">
                                     <p className="font-extrabold text-center text-base md:text-5xl">{item.title}</p>

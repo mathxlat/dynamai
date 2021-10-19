@@ -1,17 +1,17 @@
 import React from 'react'
 import { Helmet } from 'react-helmet';
-import ButtonLink from './../../components/ButtonLink';
+import Button from './../../components/Button';
 
-function Error404() {
+export const NovedadesVacio = () => {
     return (
-        <>
-            <Helmet>
+    <>
+        <Helmet>
 
-                <title>Dýnamai - ERROR 404</title>
+            <title>Dýnamai - Novedades</title>
 
-            </Helmet>
-            <main>
-            <article className="bg-gradient-radial w-full min-h-screen max-h-full from-primario-light to-black">
+        </Helmet>
+        <main>
+            <article className="bg-gradient-radial w-full min-h-screen max-h-full from-secundario-2 to-black">
                 <div className="max-w-7xl mx-auto px-5 sm:px-10 py-6">
                     <div className="mt-2 md:mt-16">
                         <div className="flex flex-col max-w-sm px-5 md:px-0 md:max-w-lg h-screen mx-auto justify-center content-center items-center antialiased -mt-40">
@@ -22,10 +22,11 @@ function Error404() {
                                 Algo no salió como esperábamos
                             </h1>
                             <p className="text-white text-center mt-4">
-                                La página que intentas acceder no existe.
+                                Encontramos un error al momento de cargar el archivo. 
+                                Por favor, intentalo de nuevo.
                             </p>
 
-                            <ButtonLink text="Ir al home" href="/" className="mt-10 md:mt-16" />
+                            <Button text="Reintentar" href="/novedades" className="mt-10 md:mt-16" />
 
                         </div>
                     </div>
@@ -35,5 +36,3 @@ function Error404() {
         </>
     )
 }
-
-export default Error404;

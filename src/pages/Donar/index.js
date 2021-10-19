@@ -96,7 +96,7 @@ function Donar() {
                         }
                     </div>
                 </div>
-                <img className="w-full" 
+                <img className="object-cover h-48 md:h-auto w-full" 
                     src="/img/pages/donar/img-donaciones.webp" 
                     alt="imagen donacion dynamai" 
                 />

@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         "semiblack": "#333333",
         "primario": "#184329",
+        "primario-light": "#208849",
         "secundario-1": "#7147B1",
         "secundario-2": "#499BA2",
         "acento-1": "#B9536E",
@@ -14,6 +15,7 @@ module.exports = {
       textColor: {
         "semiblack": "#333333",
         "primario": "#184329",
+        "primario-light": "#208849",
         "secundario-1": "#7147B1",
         "secundario-2": "#499BA2",
         "acento-1": "#B9536E",
