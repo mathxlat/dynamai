@@ -46,3 +46,9 @@
 .formik--box .main--form .input--box .input--box_label {
   margin-top: 3%;
 }
+
+@media screen and (max-width: 900px) {
+  .formik--box .main--form {
+    width: 70%;
+  }
+}
