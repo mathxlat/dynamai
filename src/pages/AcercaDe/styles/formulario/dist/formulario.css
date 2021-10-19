@@ -1,0 +1,48 @@
+.formik--box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3% 0 3% 0;
+}
+.formik--box .main--form {
+  width: 20%;
+}
+.formik--box .main--form .optional--box {
+  display: flex;
+  flex-direction: column;
+}
+.formik--box .main--form .optional--box .optional--label {
+  margin-top: 3%;
+}
+.formik--box .main--form .optional--box .optional--message {
+  width: 100%;
+  height: 100px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #4BA6A6;
+  border-radius: 4px;
+  margin-bottom: 10%;
+}
+.formik--box .main--form .optional--box .main--form_btn {
+  padding: 0.2rem;
+  background-color: #84A651;
+  border-radius: 2rem;
+  width: 100px;
+  color: #fff;
+  align-self: flex-end;
+}
+.formik--box .main--form .input--box {
+  display: flex;
+  flex-direction: column;
+}
+.formik--box .main--form .input--box .input--box_input {
+  padding: 0.5rem;
+  margin-top: 0.8rem;
+  border: 1px solid #4BA6A6;
+  border-radius: 4px;
+}
+.formik--box .main--form .input--box .input--box_label {
+  margin-top: 3%;
+}

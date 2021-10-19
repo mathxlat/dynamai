@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Error404 from './pages/Error404';
 import { About } from './pages/AcercaDe/About';
+import { Participar } from './pages/participar/Participar';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import BtnWsp from './components/BtnWsp';
@@ -23,8 +24,16 @@ function App() {
          <About />
         </Route>
 
-        <Route path='/participa'>
-          <Error404 />
+        <Route path='/organizacion'>
+         <Participar image='img/participar/participarInstitucion.png' />
+        </Route>
+
+        <Route path='/instituciones'>
+         <Participar image='img/participar/participarPrivado.png' />
+        </Route>
+
+        <Route path='/voluntariado'>
+         <Participar image='img/participar/participarVoluntario.png' />
         </Route>
 
         <Route path='/novedades'>
