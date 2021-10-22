@@ -6,6 +6,7 @@ import LeftTimeline from './LeftTimeline';
 import RightTimeline from './RightTimeline';
 import { Loading } from '../../components/Loading';
 import { NovedadesVacio } from './NovedadesVacio';
+import { firebaseAnalytics } from './../../firebase/firebase.services';
 
 function Novedades() {
     const [novedades, setNovedadades] = useState([]);
@@ -13,6 +14,7 @@ function Novedades() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        firebaseAnalytics("novedades_page_visited");
         base('Novedades').select({view: 'Novedades' }).eachPage((records, fetchNextPage) => {
             setNovedadades(records);
             setLoading(false);
@@ -23,6 +25,8 @@ function Novedades() {
     useEffect(() => {
         setDateToNew(DateToNew( novedades ));
     }, [novedades])
+
+    
 
     let colorInicio = false;
 

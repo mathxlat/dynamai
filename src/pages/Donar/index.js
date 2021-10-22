@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ComponenteDonarLink from '../../components/ComponenteDonarLink';
 import { Helmet } from 'react-helmet';
+import { firebaseAnalytics } from './../../firebase/firebase.services';
 
 const donarMensualmente = [
     {
@@ -68,6 +69,11 @@ const donacionesData = [
 
 
 function Donar() {
+
+    useEffect(() => {
+        firebaseAnalytics("donar_page_visited");
+    }, []);
+    
     return (
         <>
         <Helmet>

@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet';
 import ButtonLink from './../../components/ButtonLink';
+import { firebaseAnalytics } from './../../firebase/firebase.services';
 
 function Error404() {
+
+    useEffect(() => {
+        firebaseAnalytics("404_page_visited");
+    }, []);
+
     return (
         <>
             <Helmet>
