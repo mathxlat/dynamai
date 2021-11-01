@@ -7,6 +7,7 @@
     margin: 3% 0 3% 0;
     .main--form{
         width: 20%;
+       
         .optional--box{
             display: flex;
             flex-direction: column;
@@ -41,18 +42,30 @@
                 margin-top: 0.8rem;
                 border: 1px solid #4BA6A6;
                 border-radius: 4px;
+               
                 
             }
+            
             .input--box_label{
                 margin-top: 3%;
             }
            
-           
+            .error--message{
+                color: #B9536E;
+            }
         }
         
     }
     
-    
+    .PhoneInput{
+        padding:0.5rem;
+        margin-top: 0.8rem;
+        border: 1px solid #4BA6A6;
+        border-radius: 4px;
+        .PhoneInputCountryIconImg{
+            display: none;
+        }
+    }
 }
 @media screen and (max-width:900px) {
     .formik--box{

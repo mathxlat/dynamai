@@ -46,6 +46,18 @@
 .formik--box .main--form .input--box .input--box_label {
   margin-top: 3%;
 }
+.formik--box .main--form .input--box .error--message {
+  color: #B9536E;
+}
+.formik--box .PhoneInput {
+  padding: 0.5rem;
+  margin-top: 0.8rem;
+  border: 1px solid #4BA6A6;
+  border-radius: 4px;
+}
+.formik--box .PhoneInput .PhoneInputCountryIconImg {
+  display: none;
+}
 
 @media screen and (max-width: 900px) {
   .formik--box .main--form {
