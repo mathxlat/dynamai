@@ -1,30 +1,27 @@
-import { useState, useEffect } from 'react'
-import {Formik, Form, useFormik} from 'formik'
+import { useState } from 'react'
+import {Formik, Form} from 'formik'
 import { TextInput } from './TextInput'
 import PhoneInput, {isPossiblePhoneNumber} from 'react-phone-number-input'
 import '../../pages/AcercaDe/styles/formulario/dist/formulario.css'
 
 
 function Formulario ({institucion}) {
+    
+   
     const[formularioEnviado, setFormularioEnviado] = useState(false)
     const[telefono, setTelefono] = useState('')
+    const[mensaje, setMensaje] = useState('')
 
     const [user, setUser] = useState({
         name: '',
         surname: '',
         email: '',
-        telefono:'',
     })
 
-   console.log(user);
-   
+    const onInputMessage = ({target}) =>{
 
-    const formik = useFormik({
-        initialValues: {
-            mensaje:'',
-            telefono:''
-        }
-    })
+        setMensaje(target.value)
+    }
 
     const validate = (values) =>{
         
@@ -59,7 +56,7 @@ function Formulario ({institucion}) {
             onSubmit={(values, {resetForm}) => {
                 if(telefono && isPossiblePhoneNumber(telefono)){
                     setFormularioEnviado(true);
-                    setUser(telefono)
+                    setUser({...values, telefono, mensaje})
                   resetForm();
                 }
             }}
@@ -73,7 +70,7 @@ function Formulario ({institucion}) {
           <TextInput name='email' label='email' placeholder='benjaminnievas@gmail.com' maxlength='40'/>
           <div className='optional--box'>
             <label className='optional--label'>mensaje opcional</label>
-            <input className='optional--message'  name='mensaje' value={formik.values.mensaje} onChange={formik.handleChange}/>
+            <input className='optional--message'   value={mensaje} onChange={onInputMessage}/>
             <button className='main--form_btn' type='submit'>ENVIAR</button>
           </div>
        </Form>

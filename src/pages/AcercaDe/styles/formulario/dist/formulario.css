@@ -51,7 +51,8 @@
 }
 .formik--box .PhoneInput {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
   margin-top: 0.8rem;
 }
 .formik--box .PhoneInput .PhoneInputCountryIconImg {
@@ -62,17 +63,28 @@
   margin-top: 0.8rem;
   border: 1px solid #4BA6A6;
   border-radius: 4px;
-  width: 150px;
+  width: 100%;
 }
 .formik--box .PhoneInput .PhoneInputInput {
   padding: 0.5rem;
   margin-top: 0.8rem;
   border: 1px solid #4BA6A6;
   border-radius: 4px;
+  width: 100%;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
+  .formik--box {
+    width: 80%;
+    margin: 5%;
+  }
   .formik--box .main--form {
-    width: 70%;
+    width: 100%;
+  }
+  .formik--box .PhoneInput .PhoneInputCountrySelect {
+    width: 80%;
+  }
+  .formik--box .PhoneInput .PhoneInputInput {
+    width: 100%;
   }
 }
