@@ -58,12 +58,24 @@
     }
     
     .PhoneInput{
-        padding:0.5rem;
+        display: flex;
+        justify-content: space-between;
         margin-top: 0.8rem;
-        border: 1px solid #4BA6A6;
-        border-radius: 4px;
         .PhoneInputCountryIconImg{
             display: none;
+        }
+        .PhoneInputCountrySelect{
+            padding:0.5rem;
+            margin-top: 0.8rem;
+            border: 1px solid #4BA6A6;
+            border-radius: 4px;
+            width: 150px;
+        }
+        .PhoneInputInput{
+            padding:0.5rem;
+            margin-top: 0.8rem;
+            border: 1px solid #4BA6A6;
+            border-radius: 4px;
         }
     }
 }

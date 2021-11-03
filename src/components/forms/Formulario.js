@@ -1,17 +1,28 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {Formik, Form, useFormik} from 'formik'
 import { TextInput } from './TextInput'
-import PhoneInput from 'react-phone-number-input'
+import PhoneInput, {isPossiblePhoneNumber} from 'react-phone-number-input'
 import '../../pages/AcercaDe/styles/formulario/dist/formulario.css'
 
 
-function Formulario () {
+function Formulario ({institucion}) {
     const[formularioEnviado, setFormularioEnviado] = useState(false)
-    const[telefono, setTelefono] = useState()
+    const[telefono, setTelefono] = useState('')
+
+    const [user, setUser] = useState({
+        name: '',
+        surname: '',
+        email: '',
+        telefono:'',
+    })
+
+   console.log(user);
+   
 
     const formik = useFormik({
         initialValues: {
-            mensaje:''
+            mensaje:'',
+            telefono:''
         }
     })
 
@@ -36,31 +47,30 @@ function Formulario () {
             }else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(values.email)){
                 errors.email = "Se debe respetar la estructura de un e-mail"
             }
-            if(!values.telefono){
-                errors.telefono = '*'
-            }else if(!/^[0-9-]{1,10}$/.test(values.telefono)){
-                errors.telefono = 'Solo puedes usar numeros'
-            }
+          
             return errors;
     }
+    
     return(
         <div className='formik--box'>
-             {formularioEnviado == false? 
-    <Formik  initialValues={{institucion:'', contacto:'',email:'',telefono:''}}
+             {formularioEnviado === false? 
+    <Formik  initialValues={{institucion:'', contacto:'',email:''}}
             validate={validate}
             onSubmit={(values, {resetForm}) => {
-                resetForm();
-                console.log(values);
-                console.log(formik.values.mensaje);
-                setFormularioEnviado(true);
+                if(telefono && isPossiblePhoneNumber(telefono)){
+                    setFormularioEnviado(true);
+                    setUser(telefono)
+                  resetForm();
+                }
             }}
     >   
      <Form className='main--form'>
-          <TextInput name='institucion' label='nombre de la institucion' placeholder='Benjamin SRL'/>
-          <TextInput name='contacto' label='contacto' placeholder='Benjamin Nievas'/>
-          <PhoneInput name='telefono' placeholder='ingrese su numero' onChange={setTelefono} value={telefono} countryCallingCodeEditable={false}  defaultCountry="RU"
-            />
-          <TextInput name='email' label='email' placeholder='benjaminnievas@gmail.com'/>
+          <TextInput name='institucion' label='nombre de la institucion' placeholder='Benjamin SRL' maxlength='20'/>
+          <TextInput name='contacto' label='contacto' placeholder='Benjamin Nievas' maxlength='20'/>
+          <label name='telefono'>Indique su numero de telefono</label>
+          <PhoneInput limitMaxLength defaultCountry='AR' name='telefono' placeholder='ingrese su numero' onChange={setTelefono} value={telefono} error={telefono ? (isPossiblePhoneNumber(telefono) ? undefined : 'Invalid phone number') : 'Phone number required'} international   countryCallingCodeEditable={false}/>
+          {telefono && isPossiblePhoneNumber(telefono) ? null : 'Indique un valor valido'}
+          <TextInput name='email' label='email' placeholder='benjaminnievas@gmail.com' maxlength='40'/>
           <div className='optional--box'>
             <label className='optional--label'>mensaje opcional</label>
             <input className='optional--message'  name='mensaje' value={formik.values.mensaje} onChange={formik.handleChange}/>
