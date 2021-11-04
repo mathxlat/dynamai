@@ -13,7 +13,7 @@ export const createUser = async (nameCollection, user) => {
             date: Timestamp.fromDate(new Date()),
             user
         });
-        console.log(newDoc.id);
+        console.log(newDoc.id); 
     } catch(e) {
         console.error(e);
     }

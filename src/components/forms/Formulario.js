@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import {Formik, Form} from 'formik'
 import { TextInput } from './TextInput'
 import PhoneInput, {isPossiblePhoneNumber} from 'react-phone-number-input'
+import { createUser } from '../../firebase/firebase.services'
 import '../../pages/AcercaDe/styles/formulario/dist/formulario.css'
 
 
-function Formulario ({institucion}) {
+function Formulario ({ grupo }) {
     
    
     const[formularioEnviado, setFormularioEnviado] = useState(false)
@@ -17,6 +18,14 @@ function Formulario ({institucion}) {
         surname: '',
         email: '',
     })
+
+   useEffect(() => {
+
+    createUser(grupo, user)
+       console.log(user);
+      
+   }, [user])
+
 
     const onInputMessage = ({target}) =>{
 
