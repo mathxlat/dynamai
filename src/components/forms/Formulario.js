@@ -18,13 +18,17 @@ function Formulario ({ grupo }) {
         surname: '',
         email: '',
     })
+console.log(user);
+    useEffect(() => {
 
-   useEffect(() => {
+        if(user.name == ''){
+            
+        }else{
+        createUser(grupo, user)
 
-    createUser(grupo, user)
-       console.log(user);
-      
-   }, [user])
+        }
+
+    }, [user])
 
 
     const onInputMessage = ({target}) =>{
@@ -57,6 +61,7 @@ function Formulario ({ grupo }) {
             return errors;
     }
     
+   
     return(
         <div className='formik--box'>
              {formularioEnviado === false? 

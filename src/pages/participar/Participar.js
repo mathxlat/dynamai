@@ -14,7 +14,7 @@ export const Participar = ({image, grupo}) => {
     return(
         <div>
             <GrupoParticipante image={image} />
-            <Formulario grupo={grupo}/>
+            <Formulario grupo={grupo} />
         </div>
     )
 }

@@ -25,7 +25,7 @@ function App() {
         </Route>
 
         <Route path='/organizacion'>
-         <Participar image='img/participar/participarInstitucion.png' />
+         <Participar image='img/participar/participarInstitucion.png' grupo='organizacion' />
         </Route>
 
         <Route path='/instituciones'>
@@ -33,7 +33,7 @@ function App() {
         </Route>
 
         <Route path='/voluntariado'>
-         <Participar image='img/participar/participarVoluntario.png' />
+         <Participar image='img/participar/participarVoluntario.png' grupo='voluntariado'/>
         </Route>
 
         <Route path='/novedades'>
