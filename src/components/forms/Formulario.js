@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import {Formik, Form} from 'formik'
 import { TextInput } from './TextInput'
 import PhoneInput, {isPossiblePhoneNumber} from 'react-phone-number-input'
@@ -18,16 +18,17 @@ function Formulario ({ grupo }) {
         surname: '',
         email: '',
     })
-console.log(user);
+
     useEffect(() => {
-
-        if(user.name == ''){
-            
-        }else{
-        createUser(grupo, user)
-
-        }
-
+       
+const uploadUser= () =>{
+    if(user.name === ''){
+                
+    }else{
+    createUser(grupo, user)
+    }
+}
+        uploadUser();
     }, [user])
 
 
