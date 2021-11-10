@@ -72,6 +72,34 @@
   border-radius: 4px;
   width: 100%;
 }
+.formik--box .send--message-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formik--box .send--message-box .image-mother {
+  width: 300px;
+  margin: 1.5rem;
+}
+.formik--box .send--message-box .send--message-title {
+  color: #6344A6;
+}
+.formik--box .send--message-box .message--text {
+  margin: 1rem;
+  text-align: center;
+  width: 60%;
+  font-size: 1.2rem;
+  color: #6344A6;
+}
+.formik--box .send--message-box .btn--return-home {
+  padding: 0.5rem;
+  background-color: #84A651;
+  border-radius: 9999px;
+  font-size: 1.2rem;
+  width: 200px;
+  text-align: center;
+  color: #fff;
+}
 
 @media screen and (max-width: 1100px) {
   .formik--box {
@@ -86,5 +114,8 @@
   }
   .formik--box .PhoneInput .PhoneInputInput {
     width: 100%;
+  }
+  .formik--box .send--message-box .image-mother {
+    width: 200px;
   }
 }

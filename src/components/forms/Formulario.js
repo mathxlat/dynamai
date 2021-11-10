@@ -3,6 +3,7 @@ import {Formik, Form} from 'formik'
 import { TextInput } from './TextInput'
 import PhoneInput, {isPossiblePhoneNumber} from 'react-phone-number-input'
 import { createUser } from '../../firebase/firebase.services'
+import { Link } from 'react-router-dom'
 import '../../pages/AcercaDe/styles/formulario/dist/formulario.css'
 
 
@@ -41,11 +42,13 @@ const uploadUser= () =>{
         
             const errors = {}
 
+            if(grupo !== 'voluntariado'){
             if(!values.institucion){
                 errors.institucion = '*'
             }else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(values.institucion)){
                 errors.institucion = 'El nombre solo puede contener letras y espacios'
             }
+        }
             
             if(!values.contacto){
                 errors.contacto = '*'
@@ -62,7 +65,7 @@ const uploadUser= () =>{
             return errors;
     }
     
-   
+ 
     return(
         <div className='formik--box'>
              {formularioEnviado === false? 
@@ -72,12 +75,17 @@ const uploadUser= () =>{
                 if(telefono && isPossiblePhoneNumber(telefono)){
                     setFormularioEnviado(true);
                     setUser({...values, telefono, mensaje})
+                    values.institucion ='asd'
+
                   resetForm();
                 }
-            }}
+            }}  
     >   
      <Form className='main--form'>
-          <TextInput name='institucion' label='nombre de la institucion' placeholder='Benjamin SRL' maxlength='20'/>
+         {grupo === 'voluntariado'?
+         null
+         : <TextInput name='institucion' label='nombre de la institucion' placeholder='Benjamin SRL' maxlength='20'/>
+         }
           <TextInput name='contacto' label='contacto' placeholder='Benjamin Nievas' maxlength='20'/>
           <label name='telefono'>Indique su numero de telefono</label>
           <PhoneInput limitMaxLength defaultCountry='AR' name='telefono' placeholder='ingrese su numero' onChange={setTelefono} value={telefono} error={telefono ? (isPossiblePhoneNumber(telefono) ? undefined : 'Invalid phone number') : 'Phone number required'} international   countryCallingCodeEditable={false}/>
@@ -90,7 +98,12 @@ const uploadUser= () =>{
           </div>
        </Form>
      </Formik> 
-: <div>enviado¡</div>
+: <div className='send--message-box'>
+    <img className='image-mother' src='img/Png/mother.png' alt='dibujo de mujer'/>
+    <h1 className='send--message-title'>Mensaje enviado</h1>    
+    <p className='message--text'>Tu mensaje fue enviado correctamente !Pronto recibiras una respuesta¡</p>
+    <Link to='/'><div className='btn--return-home'>Volver al inicio</div></Link>
+</div>
         }
     </div>
     )
