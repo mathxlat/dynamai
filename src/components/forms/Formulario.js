@@ -84,15 +84,15 @@ const uploadUser= () =>{
      <Form className='main--form'>
          {grupo === 'voluntariado'?
          null
-         : <TextInput name='institucion' label='nombre de la institucion' placeholder='Benjamin SRL' maxlength='20'/>
+         : <TextInput name='institucion' label='Nombre de la institucion' placeholder='Benjamin SRL' maxlength='20'/>
          }
-          <TextInput name='contacto' label='contacto' placeholder='Benjamin Nievas' maxlength='20'/>
-          <label name='telefono'>Indique su numero de telefono</label>
+          <TextInput name='contacto' label='Nombre de contacto' placeholder='Benjamin Nievas' maxlength='20'/>
+          <label name='telefono'>Telefono de contacto</label>
           <PhoneInput limitMaxLength defaultCountry='AR' name='telefono' placeholder='ingrese su numero' onChange={setTelefono} value={telefono} error={telefono ? (isPossiblePhoneNumber(telefono) ? undefined : 'Invalid phone number') : 'Phone number required'} international   countryCallingCodeEditable={false}/>
-          {telefono && isPossiblePhoneNumber(telefono) ? null : 'Indique un valor valido'}
-          <TextInput name='email' label='email' placeholder='benjaminnievas@gmail.com' maxlength='40'/>
+          {telefono && isPossiblePhoneNumber(telefono) ? null : '*'}
+          <TextInput name='email' label='Email' placeholder='benjaminnievas@gmail.com' maxlength='40'/>
           <div className='optional--box'>
-            <label className='optional--label'>mensaje opcional</label>
+            <label className='optional--label'>mensaje (opcional)</label>
             <input className='optional--message'   value={mensaje} onChange={onInputMessage}/>
             <button className='main--form_btn' type='submit'>ENVIAR</button>
           </div>
@@ -101,7 +101,7 @@ const uploadUser= () =>{
 : <div className='send--message-box'>
     <img className='image-mother' src='img/Png/mother.png' alt='dibujo de mujer'/>
     <h1 className='send--message-title'>Mensaje enviado</h1>    
-    <p className='message--text'>Tu mensaje fue enviado correctamente !Pronto recibiras una respuesta¡</p>
+    <p className='message--text'>Tu mensaje fue enviado correctamente ¡Pronto recibiras una respuesta!</p>
     <Link to='/'><div className='btn--return-home'>Volver al inicio</div></Link>
 </div>
         }
