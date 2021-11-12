@@ -145,7 +145,7 @@ export default function NavBar() {
                   <Link
                         to="/donar"
                         onClick={() => isOpenDrawer(open)}
-                        className="flex items-center transition justify-center px-4 mx-2 py-2 border border-transparent rounded-full shadow-sm text-base font-medium uppercase tracking-wider text-secundario-1 bg-white hover:bg-gray-900"
+                        className="flex items-center transition justify-center px-4 mx-2 py-2 border border-transparent rounded-full shadow-sm text-base font-medium uppercase tracking-wider text-secundario-1 bg-white hover:text-white hover:bg-secundario-1"
                         >
                         Donar
                   </Link>
@@ -187,9 +187,9 @@ export default function NavBar() {
                               {participa.map( item =>(
                                   <NavLink exact to={item.href}
                                   key={item.name}
-                                  activeClassName="bg-acento-2"
+                                  activeClassName="text-opacity-100 bg-acento-2"
                                   onClick={() => LinkParticipaRef.current?.click()} 
-                                  className="-m-4 p-3 pl-10 text-white flex font-nunito border-b border-gray-800 last:border-transparent font-semibold items-start opacity-80  hover:bg-acento-2">
+                                  className="-m-4 p-3 pl-10 text-white flex font-nunito border-b border-gray-800 last:border-transparent font-semibold items-start text-opacity-80 hover:text-opacity-100 hover:bg-acento-2">
                                     {item.name}
                                   </NavLink>
                               ))}
@@ -205,13 +205,13 @@ export default function NavBar() {
                   </div>
                   <Link 
                     to='/donar'
-                    className="hidden md:hidden lg:flex justify-center items-center sm:ml-6 font-nunito font-semibold text-base uppercase bg-white hover:bg-gray-900 text-secundario-1 hover:text-white px-6 py-2 shadow hover:shadow-lg tracking-wider transition rounded-full whitespace-nowrap cursor-pointer"
+                    className="hidden md:hidden lg:flex justify-center items-center sm:ml-6 font-nunito font-semibold text-base uppercase bg-white hover:bg-secundario-1 text-secundario-1 hover:text-white px-6 py-2 shadow hover:shadow-lg tracking-wider transition rounded-full whitespace-nowrap cursor-pointer"
                     >
                       Quiero Donar
                   </Link>
                   <Link 
                     to='/donar'
-                    className="hidden md:flex lg:hidden justify-center items-center sm:ml-6 font-nunito font-semibold text-base uppercase bg-white hover:bg-gray-900 text-secundario-1 hover:text-white px-3 py-2 shadow hover:shadow-lg tracking-wider transition rounded-full whitespace-nowrap cursor-pointer"
+                    className="hidden md:flex lg:hidden justify-center items-center sm:ml-6 font-nunito font-semibold text-base uppercase bg-white hover:bg-secundario-1 text-secundario-1 hover:text-white px-3 py-2 shadow hover:shadow-lg tracking-wider transition rounded-full whitespace-nowrap cursor-pointer"
                     >
                       Donar
                   </Link>

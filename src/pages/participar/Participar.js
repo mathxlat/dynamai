@@ -1,3 +1,4 @@
+import {Helmet} from 'react-helmet';
 import Formulario from "../../components/forms/Formulario"
 import { GrupoParticipante } from "../../components/GrupoParticipante"
 import { useEffect } from 'react';
@@ -12,9 +13,16 @@ export const Participar = ({image, grupo}) => {
     }, []);
 
     return(
-        <div>
-            <GrupoParticipante image={image} />
-            <Formulario grupo={grupo} />
-        </div>
+        <>
+            <Helmet>
+                
+                <title> Dýnamai - Participar </title>
+
+            </Helmet>
+            <div>
+                <GrupoParticipante image={image} />
+                <Formulario grupo={grupo} />
+            </div>
+        </>
     )
 }
