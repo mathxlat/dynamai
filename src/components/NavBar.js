@@ -237,19 +237,19 @@ export default function NavBar() {
                           key={item.name}
                           exact to={item.href}
                           onClick={() => drawerMenuClose.current?.click()} 
-                          activeClassName="bg-acento-2 hover:bg-acento-2"
-                          className="text-white text-opacity-80 py-5 transition-all hover:bg-acento-2 flex items-center px-3 text-base font-medium whitespace-nowrap"
+                          activeClassName="bg-acento-2 bg-opacity-60 hover:bg-acento-2"
+                          className="text-white text-opacity-80 py-5 transition-all hover:bg-acento-2 hover:bg-opacity-60 flex items-center px-3 text-base font-medium whitespace-nowrap"
                           >
-                          <img className="h-8 ml-3 mr-6" src={item.iconDrawer} alt={item.name} /> 
+                          <img className="h-8 w-8 ml-3 mr-6" src={item.iconDrawer} alt={item.name} /> 
                           {item.name}
                       </NavLink>) : (
                       <a 
                         key={item.name}
                         href={item.href}
                         onClick={() => drawerMenuClose.current?.click()}
-                        className="text-white text-opacity-80 py-5 transition-all hover:bg-acento-2 flex items-center px-3 text-base font-medium whitespace-nowrap"
+                        className="text-white text-opacity-80 py-5 transition-all hover:bg-acento-2 hover:bg-opacity-60 flex items-center px-3 text-base font-medium whitespace-nowrap"
                         >
-                        <img className="h-8 ml-3 mr-6" src={item.iconDrawer} alt={item.name} /> 
+                        <img className="h-8 w-8 ml-3 mr-6" src={item.iconDrawer} alt={item.name} /> 
                         {item.name}
                       </a>
                   )
@@ -257,9 +257,9 @@ export default function NavBar() {
                       <Disclosure key={item.name}>
                         {({ open }) => (
                           <>
-                            <Disclosure.Button className={`flex justify-between items-center w-full text-white text-opacity-80 py-5 px-3 text-base font-medium whitespace-nowrap ${ drawerParticipa ? 'bg-acento-2' : 'bg-semiblack' }`}>
+                            <Disclosure.Button className={`flex justify-between items-center w-full text-white text-opacity-80 py-5 px-3 text-base font-medium whitespace-nowrap hover:bg-acento-2 hover:bg-opacity-60 ${ drawerParticipa ? 'bg-acento-2 bg-opacity-60' : 'bg-semiblack' }`}>
                               <div className="flex items-center ">
-                                <img className="h-8 ml-3 mr-6" src={item.iconDrawer} alt={item.name} /> 
+                                <img className="h-8 w-8 ml-3 mr-6" src={item.iconDrawer} alt={item.name} /> 
                                 <span>{item.name}</span>
                               </div>
                               <ChevronDownIcon 
@@ -281,8 +281,8 @@ export default function NavBar() {
                                     key={item.name}
                                     exact to={item.href}
                                     onClick={() => drawerMenuClose.current?.click()} 
-                                    activeClassName="bg-acento-2"
-                                    className="text-white text-opacity-80 py-5 pl-20 hover:bg-acento-2 block text-base font-medium whitespace-nowrap">
+                                    activeClassName="bg-acento-2 bg-opacity-60"
+                                    className="text-white text-opacity-80 py-5 pl-20 hover:bg-acento-2 hover:bg-opacity-60 block text-base font-medium whitespace-nowrap">
                                       {item.name}
                                   </NavLink>
                                 ) )}
