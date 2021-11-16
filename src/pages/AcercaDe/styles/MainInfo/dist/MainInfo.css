@@ -4,8 +4,8 @@
   background-color: #428C8C;
 }
 .main--info .info--left {
-  width: 30%;
-  margin-left: 18%;
+  width: 70%;
+  margin-left: 5%;
   margin-top: 5%;
   margin-bottom: 8%;
 }
@@ -21,9 +21,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 40%;
+  width: 60%;
   margin-left: 15%;
-  margin-right: 15%;
+  margin-right: 5%;
   margin-top: 5%;
 }
 .main--info .info--right .quote {
@@ -36,14 +36,54 @@
 }
 
 @media screen and (max-width: 1220px) {
-  .main--info {
-    flex-direction: column;
-  }
   .main--info .info--left {
-    width: 70%;
+    width: 90%;
+    margin-right: 3%;
   }
   .main--info .info--right {
-    margin-left: 30%;
-    width: 60%;
+    margin-left: 5%;
+    margin-right: 2%;
+    width: 40%;
+  }
+  .main--info .info--right #info2 {
+    right: 70px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .main--info .info--left {
+    margin-left: 3%;
+    margin-right: 5%;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .main--info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main--info .info--left {
+    margin-left: 8%;
+    margin-bottom: 1%;
+  }
+  .main--info .info--left .info--text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .main--info .info--right {
+    width: 50%;
+    margin: 1%;
+  }
+  .main--info .info--right #info2 {
+    right: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main--info .info--right {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .main--info .info--right {
+    width: 90%;
+    margin-left: 0%;
   }
 }

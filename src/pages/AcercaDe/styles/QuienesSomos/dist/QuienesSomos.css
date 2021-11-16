@@ -36,7 +36,6 @@
 }
 .quienesAcompanan--wrap .empresas .empresa .sirius--image {
   width: 150px;
-  height: 150px;
 }
 .quienesAcompanan--wrap .empresas .empresa .horizonte--maxima_image {
   width: 50%;
@@ -54,18 +53,24 @@
 .quienesAcompanan--wrap .empresas .empresa p {
   width: 70%;
   font-size: 1em;
+  line-height: 1.2rem;
+}
+.quienesAcompanan--wrap .fundacion--imagen_responsive {
+  display: none;
 }
 
 @media screen and (max-width: 1000px) {
   .quienesAcompanan--wrap {
     margin: 0;
   }
+  .quienesAcompanan--wrap .fundacion--imagen_responsive {
+    display: block;
+  }
   .quienesAcompanan--wrap .empresas #fundacionHorizonte {
     display: none;
   }
   .quienesAcompanan--wrap .empresas .empresa .sirius--image {
-    width: 5rem;
-    height: 5rem;
+    width: 180px;
   }
   .quienesAcompanan--wrap .empresas .empresa img {
     width: 40%;

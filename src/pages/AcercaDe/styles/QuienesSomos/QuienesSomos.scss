@@ -34,7 +34,6 @@
             align-items: center;
             .sirius--image{
                 width: 150px;
-                height: 150px;
             }
             .horizonte--maxima_image{
                 width: 50%;
@@ -52,14 +51,21 @@
             p{
                 width: 70%;
                 font-size: 1em;
+                line-height: 1.2rem;
             }
         }
+    }
+    .fundacion--imagen_responsive{
+        display: none;
     }
 }
 @media screen and(max-width:1000px) {
     
     .quienesAcompanan--wrap{
         margin: 0;
+        .fundacion--imagen_responsive{
+            display: block;
+        }
         .empresas{
 
             #fundacionHorizonte{
@@ -69,8 +75,7 @@
                 .empresa{
 
                     .sirius--image{
-                        width: 5rem;
-                        height: 5rem;
+                        width: 180px;
                     }
                     
                     img{
