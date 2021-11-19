@@ -1,0 +1,60 @@
+.propuesta--wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #6344A6;
+}
+
+.propuesta--wrap .propuesta--info {
+  width: 40%;
+}
+
+.propuesta--wrap .propuesta--info .propuesta--title {
+  margin-bottom: 3%;
+  color: #fff;
+}
+
+.propuesta--wrap .propuesta--info .propuesta--main_text {
+  margin-bottom: 5%;
+  color: #fff;
+}
+
+.propuesta--wrap .propuesta--info .propuesta--secondary_text {
+  margin-bottom: 4%;
+  color: #fff;
+}
+
+.propuesta--wrap .diferenciales--wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.propuesta--wrap .diferenciales--wrap .diferenciales--img {
+  width: 30px;
+  height: 30px;
+  margin-right: 3%;
+}
+
+.propuesta--wrap .diferenciales--wrap .diferenciales--text {
+  color: #fff;
+}
+
+@media screen and (max-width: 1220px) {
+  .propuesta--wrap .propuesta--app {
+    display: none;
+  }
+  .propuesta--wrap .propuesta--info {
+    width: 80%;
+    margin-left: 18%;
+    margin-top: 3%;
+  }
+}
+/*# sourceMappingURL=ArticlePropuesta.css.map */

@@ -1,0 +1,174 @@
+.formik--box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3% 0 3% 0;
+}
+
+.formik--box .main--form {
+  font-family: 'Nunito', sans-serif;
+  width: 40%;
+}
+
+.formik--box .main--form .separador--telefono {
+  margin-top: 2rem;
+}
+
+.formik--box .main--form .optional--box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formik--box .main--form .optional--box .optional--label {
+  margin-top: 3%;
+}
+
+.formik--box .main--form .optional--box .optional--message {
+  width: 100%;
+  height: 100px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #4BA6A6;
+  border-radius: 4px;
+  margin-bottom: 10%;
+}
+
+.formik--box .main--form .optional--box .main--form_btn {
+  padding: 0.2rem;
+  background-color: #84A651;
+  border-radius: 2rem;
+  width: 100px;
+  color: #fff;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.formik--box .main--form .input--box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formik--box .main--form .input--box .input--box_input {
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  border: 1px solid #4BA6A6;
+  border-radius: 4px;
+}
+
+.formik--box .main--form .input--box .input--box_label {
+  margin-top: 5%;
+}
+
+.formik--box .main--form .input--box .error--message {
+  color: #B9536E;
+}
+
+.formik--box .PhoneInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  margin-top: 0.8rem;
+}
+
+.formik--box .PhoneInput .PhoneInputCountryIconImg {
+  display: none;
+}
+
+.formik--box .PhoneInput .PhoneInputCountrySelect {
+  padding: 0.5rem;
+  border: 1px solid #4BA6A6;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.formik--box .PhoneInput .PhoneInputInput {
+  padding: 0.5rem;
+  border: 1px solid #4BA6A6;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.formik--box .send--message-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formik--box .send--message-box .image-mother {
+  width: 300px;
+  margin: 1.5rem;
+}
+
+.formik--box .send--message-box .send--message-title {
+  color: #6344A6;
+}
+
+.formik--box .send--message-box .message--text {
+  margin: 1rem;
+  text-align: center;
+  width: 60%;
+  font-size: 1.2rem;
+  color: #6344A6;
+}
+
+.formik--box .send--message-box .btn--return-home {
+  padding: .5rem;
+  background-color: #84A651;
+  border-radius: 9999px;
+  font-size: 1.2rem;
+  width: 200px;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-width: 1100px) {
+  .formik--box {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .formik--box .main--form {
+    width: 100%;
+  }
+  .formik--box .PhoneInput .PhoneInputCountrySelect {
+    width: 80%;
+  }
+  .formik--box .PhoneInput .PhoneInputInput {
+    width: 100%;
+  }
+  .formik--box .send--message-box .image-mother {
+    width: 200px;
+  }
+}
+/*# sourceMappingURL=formulario.css.map */

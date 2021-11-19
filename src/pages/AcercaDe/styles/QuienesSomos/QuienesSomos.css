@@ -1,0 +1,110 @@
+.quienesSomos--wrap {
+  width: 100%;
+  position: relative;
+}
+
+.quienesSomos--wrap h2 {
+  position: absolute;
+  top: 0;
+  margin-top: 3%;
+  margin-left: 3%;
+  color: #fff;
+}
+
+.quienesSomos--wrap img {
+  width: 100%;
+  height: 100%;
+}
+
+.quienesAcompanan--wrap {
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.quienesAcompanan--wrap .quienesAcompanan--title {
+  margin-bottom: 2%;
+}
+
+.quienesAcompanan--wrap .empresas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.quienesAcompanan--wrap .empresas .empresa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.quienesAcompanan--wrap .empresas .empresa .sirius--image {
+  width: 150px;
+}
+
+.quienesAcompanan--wrap .empresas .empresa .horizonte--maxima_image {
+  width: 50%;
+  height: 50%;
+}
+
+.quienesAcompanan--wrap .empresas .empresa img {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.quienesAcompanan--wrap .empresas .empresa h4 {
+  width: 60%;
+  font-weight: bold;
+}
+
+.quienesAcompanan--wrap .empresas .empresa p {
+  width: 70%;
+  font-size: 1em;
+  line-height: 1.2rem;
+}
+
+.quienesAcompanan--wrap .fundacion--imagen_responsive {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .quienesAcompanan--wrap {
+    margin: 0;
+  }
+  .quienesAcompanan--wrap .fundacion--imagen_responsive {
+    display: block;
+  }
+  .quienesAcompanan--wrap .empresas #fundacionHorizonte {
+    display: none;
+  }
+  .quienesAcompanan--wrap .empresas .empresa .sirius--image {
+    width: 150px;
+  }
+  .quienesAcompanan--wrap .empresas .empresa img {
+    width: 40%;
+  }
+  .quienesAcompanan--wrap .empresas .empresa h4 {
+    width: 100%;
+    margin-top: 5%;
+  }
+  .quienesAcompanan--wrap .empresas .empresa p {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=QuienesSomos.css.map */

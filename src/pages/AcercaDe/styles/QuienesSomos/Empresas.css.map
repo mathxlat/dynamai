@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAA;EACX,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,MAAM,EAAE,KAAK;CAChB",
+    "sources": [
+        "Empresas.scss"
+    ],
+    "names": [],
+    "file": "Empresas.css"
+}
