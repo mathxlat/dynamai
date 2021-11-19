@@ -7,7 +7,7 @@
     .info--wrap_text{
         color: #ffff;
         word-spacing: 0.25em;
-        padding: 2rem 2rem;
+        padding: 2rem 3rem;
         text-align: center;
     }
 }
@@ -44,7 +44,7 @@
 }
 @media screen and(max-width:450px){
     .info--wrap{
-        width: 350px;
+        width: 100%;
         margin-bottom: 5rem;
         .info--wrap_text{
             font-size: 1.2rem;

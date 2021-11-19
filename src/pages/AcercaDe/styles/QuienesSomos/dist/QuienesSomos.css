@@ -42,7 +42,6 @@
   height: 50%;
 }
 .quienesAcompanan--wrap .empresas .empresa img {
-  height: 40%;
   width: 40%;
   border-radius: 50%;
 }
@@ -70,11 +69,10 @@
     display: none;
   }
   .quienesAcompanan--wrap .empresas .empresa .sirius--image {
-    width: 180px;
+    width: 150px;
   }
   .quienesAcompanan--wrap .empresas .empresa img {
     width: 40%;
-    height: 40%;
   }
   .quienesAcompanan--wrap .empresas .empresa h4 {
     width: 100%;

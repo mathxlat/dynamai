@@ -33,7 +33,7 @@ const info = [
             </div>
             <div className='info--right'>
                 {
-                info.map(info => <InfoPhrases info={info.content} id={info.id}></InfoPhrases>)
+                info.map(info => <InfoPhrases info={info.content} id={info.id} key={info.id}></InfoPhrases>)
                 }
                 <p className='quote'>(*citas de la inicitiva del G20 por el desarrollo de la primera infancia.)</p>
             </div>

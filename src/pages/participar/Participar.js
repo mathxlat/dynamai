@@ -6,7 +6,7 @@ import { firebaseAnalytics } from './../../firebase/firebase.services';
 
 
 
-export const Participar = ({image, grupo}) => {
+export const Participar = ({image, grupo, image2, text}) => {
 
     useEffect(() => {
         firebaseAnalytics("participar_page_visited");
@@ -20,7 +20,7 @@ export const Participar = ({image, grupo}) => {
 
             </Helmet>
             <div>
-                <GrupoParticipante image={image} />
+                <GrupoParticipante image={image} image2={image2} text={text} />
                 <Formulario grupo={grupo} />
             </div>
         </>

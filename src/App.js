@@ -25,15 +25,15 @@ function App() {
         </Route>
 
         <Route path='/organizacion'>
-         <Participar image='img/participar/participarInstitucion.png' grupo='organizacion' />
+         <Participar image='img/participar/participarInstitucion.png' grupo='organizacion' image2='img/participar/institucionResponsive.png' text='¿Trabajas en una organización pública o privada y crees que podemos hacer algo en conjunto? Ya sea que produzcan contenido relevante de la primera infancia, trabajen con personas que podrían usar la app o lleven a cabo cualquier otra acción relacionada. ¡Escribinos!' />
         </Route>
 
         <Route path='/instituciones'>
-         <Participar image='img/participar/participarPrivado.png' grupo='instituciones' />
+         <Participar image='img/participar/participarPrivado.png' grupo='instituciones' image2='img/participar/organizacionResponsive.png' text='Desarrollamos tecnología a medida para clínicas, hospitales y centros de primera infancia para que puedan hacer un mejor seguimiento de sus programas y sus beneficiarios. También desarrollamos informes y estadísticas para el diseño de políticas públicas basadas en evidencia.' />
         </Route>
 
         <Route path='/voluntariado'>
-         <Participar image='img/participar/participarVoluntario.png' grupo='voluntariado'/>
+         <Participar image='img/participar/participarVoluntario.png' grupo='voluntariado' image2='img/participar/voluntarioResponsive.png' text='¿Te interesa ser parte de Dynamai? Si tenés habilidades de programación, diseño, marketing o querés compartir o difundir conocimientos relevantes de la primera infancia, ¡Escribinos!'/>
         </Route>
 
         <Route path='/novedades'>

@@ -87,12 +87,14 @@ const uploadUser= () =>{
          : <TextInput name='institucion' label='Nombre de la institucion' placeholder='Benjamin SRL' maxlength='20'/>
          }
           <TextInput name='contacto' label='Nombre de contacto' placeholder='Benjamin Nievas' maxlength='20'/>
-          <label name='telefono'>Telefono de contacto</label>
+          <div className='separador--telefono'>
+          <label name='telefono' className='label--telefono'>Telefono de contacto</label>
           <PhoneInput limitMaxLength defaultCountry='AR' name='telefono' placeholder='ingrese su numero' onChange={setTelefono} value={telefono} error={telefono ? (isPossiblePhoneNumber(telefono) ? undefined : 'Invalid phone number') : 'Phone number required'} international   countryCallingCodeEditable={false}/>
           {telefono && isPossiblePhoneNumber(telefono) ? null : '*'}
+          </div>
           <TextInput name='email' label='Email' placeholder='benjaminnievas@gmail.com' maxlength='40'/>
           <div className='optional--box'>
-            <label className='optional--label'>mensaje (opcional)</label>
+            <label className='optional--label'>Mensaje (opcional)</label>
             <input className='optional--message'   value={mensaje} onChange={onInputMessage}/>
             <button className='main--form_btn' type='submit'>ENVIAR</button>
           </div>

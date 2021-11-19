@@ -82,17 +82,20 @@
 }
 @media screen and (max-width: 1200px) {
   .bloques--wrap .bloques--title {
+    font-size: 1.25rem;
+    margin-top: 5%;
     margin-left: 5%;
   }
   .bloques--wrap .primer--bloque_wrap .bloques--mothers {
     display: none;
   }
   .bloques--wrap .primer--bloque_wrap .bloques--grafico1 {
-    width: 80%;
+    width: 90%;
     margin-left: 5%;
     margin-top: 10%;
   }
   .bloques--wrap .bloques--title2 {
+    font-size: 1.25rem;
     margin-left: 5%;
     margin-top: 10%;
   }

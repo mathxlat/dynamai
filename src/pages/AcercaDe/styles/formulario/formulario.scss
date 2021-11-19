@@ -6,8 +6,12 @@
     justify-content: center;
     margin: 3% 0 3% 0;
     .main--form{
-        width: 20%;
-       
+        font-family: 'Nunito', sans-serif;
+        width: 40%;
+       .separador--telefono{
+           margin-top: 2rem;
+       }
+        
         .optional--box{
             display: flex;
             flex-direction: column;
@@ -39,15 +43,13 @@
             
             .input--box_input{
                 padding:0.5rem;
-                margin-top: 0.8rem;
+                margin-top: 0.2rem;
                 border: 1px solid #4BA6A6;
                 border-radius: 4px;
-               
-                
             }
             
             .input--box_label{
-                margin-top: 3%;
+                margin-top: 5%;
             }
            
             .error--message{
@@ -67,14 +69,12 @@
         }
         .PhoneInputCountrySelect{
             padding:0.5rem;
-            margin-top: 0.8rem;
             border: 1px solid #4BA6A6;
             border-radius: 4px;
             width:100%;
         }
         .PhoneInputInput{
             padding:0.5rem;
-            margin-top: 0.8rem;
             border: 1px solid #4BA6A6;
             border-radius: 4px;
             width: 100%;
@@ -112,8 +112,8 @@
 
 @media screen and (max-width:1100px) {
     .formik--box{   
-        width: 80%;
-        margin: 5%;
+        width: 90%;
+        margin-left: 5%;
     .main--form{
         width:100%;
     }

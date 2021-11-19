@@ -1,3 +1,27 @@
 .image--group {
   width: 100%;
 }
+
+.image--group_responsive {
+  width: 100%;
+  display: none;
+}
+
+.text--responsive {
+  margin: 5%;
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .image--group {
+    display: none;
+  }
+
+  .image--group_responsive {
+    display: block;
+  }
+
+  .text--responsive {
+    display: block;
+  }
+}
