@@ -77,6 +77,12 @@
   }
 }
 @media screen and (max-width: 800px) {
+  .main--info .info--left .info--text {
+    font-size: 1rem;
+  }
+  .main--info .info--left .info--titles {
+    font-size: 1.5rem;
+  }
   .main--info .info--right {
     width: 80%;
   }

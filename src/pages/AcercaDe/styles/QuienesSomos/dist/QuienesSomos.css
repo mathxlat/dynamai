@@ -15,9 +15,8 @@
 }
 
 .quienesAcompanan--wrap {
-  margin-left: 5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  padding: 1.5rem;
+  padding-right: 2rem;
 }
 .quienesAcompanan--wrap .quienesAcompanan--title {
   margin-bottom: 2%;

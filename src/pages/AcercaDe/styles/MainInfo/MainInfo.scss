@@ -89,6 +89,14 @@
 }
 @media screen and(max-width:800px){
     .main--info{
+        .info--left{
+            .info--text{
+                font-size: 1rem;
+            }
+            .info--titles{
+                font-size: 1.5rem;
+            }
+        }
         .info--right{
             width: 80%;
         }
