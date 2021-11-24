@@ -53,16 +53,18 @@
   font-size: 1em;
   line-height: 1.2rem;
 }
-.quienesAcompanan--wrap .fundacion--imagen_responsive {
+
+.fundacion--imagen_responsive {
   display: none;
 }
 
 @media screen and (max-width: 1000px) {
+  .fundacion--imagen_responsive {
+    display: block;
+  }
+
   .quienesAcompanan--wrap {
     margin: 0;
-  }
-  .quienesAcompanan--wrap .fundacion--imagen_responsive {
-    display: block;
   }
   .quienesAcompanan--wrap .empresas #fundacionHorizonte {
     display: none;

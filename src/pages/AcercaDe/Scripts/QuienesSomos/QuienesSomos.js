@@ -30,6 +30,7 @@ export const QuienesSomos = () => {
               <p>fundacion</p>
           </div>
           </div>
+
        </div>
        <img className='fundacion--imagen_responsive' src='/img/Png/fundacion-horizonte.png' alt='fundacion horizonte'></img>
 
