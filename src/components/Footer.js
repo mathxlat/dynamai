@@ -30,7 +30,7 @@ const redes = [
 
 export default function Footer() {
     return (
-        <footer className="bg-primario">
+        <footer className="bg-primario-light">
             <div>
                 <div className="flex flex-col max-w-xs mx-auto pt-5">
                     <p className="inline-block sm:hidden max-w-xs mx-auto uppercase text-white text-xs">SEGUINOS EN</p>
