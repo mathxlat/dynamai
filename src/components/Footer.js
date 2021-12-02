@@ -44,7 +44,9 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col xl:flex-row max-w-7xl mx-auto justify-between items-center sm:items-start px-10 py-5">
                     {infoFooter.map( item => (
-                        <p key={item.content} className="font-nunito text-xs sm:text-lg text-center sm:font-semibold text-white">{item.content}</p>
+                        <p key={item.content} className="font-nunito text-xs py-1 sm:text-lg text-center sm:font-semibold text-white first:order-first last:order-first">
+                            {item.content}
+                        </p>
                     ) )}
                 </div>
             </div>

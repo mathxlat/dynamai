@@ -50,6 +50,7 @@ module.exports = {
       boxShadow: ['active'],
       width: ['last'],
       height: ['last'],
+      order: ['last', 'first']
     },
   },
   plugins: [],
