@@ -24,7 +24,7 @@ function App() {
          <About />
         </Route>
 
-        <Route path='/organizacion'>
+        <Route path='/alianzas'>
          <Participar image='img/participar/participarInstitucion.png' grupo='organizacion' image2='img/participar/institucionResponsive.png' text='¿Trabajas en una organización pública o privada y crees que podemos hacer algo en conjunto? Ya sea que produzcan contenido relevante de la primera infancia, trabajen con personas que podrían usar la app o lleven a cabo cualquier otra acción relacionada. ¡Escribinos!' />
         </Route>
 

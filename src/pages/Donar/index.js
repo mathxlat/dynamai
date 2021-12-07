@@ -93,7 +93,7 @@ function Donar() {
                             </h1>
                             <div className="flex justify-center items-center border-2 border-white rounded-full mt-10 mb-10 md:mb-0 xl:mt-0 w-full xl:w-6/12 h-28 md:h-44 px-10 md:px-20">
                                 <p className="text-white text-center font-light italic">
-                                    $200 pesos donados nos permite llegar a una nueva familiar.
+                                    $200 pesos donados nos permite llegar a una nueva familia.
                                 </p>
                             </div>
                         </div>

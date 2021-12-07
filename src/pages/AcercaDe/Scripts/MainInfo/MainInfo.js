@@ -26,7 +26,7 @@ const info = [
                 <p className='info--text'>En nuestro país, muchas madres y padres no acceden a toda la informacion que necesitan respecto al cuidado y al desarrollo de sus hijos durante el embarazo y la primera infancia, especialmente en los sectores de mayor vulnerabilidad.</p>
             </div>
             <div className='info--vision'>
-                <h3 className='info--titles'>NUESTRO PROPOSITO Y VISION</h3>
+                <h3 className='info--titles'>NUESTRO PROPÓSITO Y VISIÓN</h3>
                 <p className='info--text'>Acompañar a madres y padres en la tarea de criar a sus hijos, acercando todos los conocimientos y herramientas que necesiten durante el embarazo e infancia, de forma didáctica y aplicable.</p>
                 <p className='info--text'>Creemos en un mundo en el que todos puedan desarrollar al máximo su potencial y, así tambien, contribuir a mejorar la sociedad en su conjunto.</p>
             </div>

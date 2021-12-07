@@ -50,8 +50,8 @@ const navigation = [
 
 const participa = [
     { 
-      name: 'Organización pública/privada', 
-      href: '/organizacion' 
+      name: 'Alianzas Institucionales', 
+      href: '/alianzas' 
     },
     { 
       name: 'Instituciones de salud', 

@@ -9,12 +9,12 @@ const infoBeneficiarios = [
     {
         title: "+300.000",
         icon: "/img/icons/mujer-embarazada.svg",
-        content: "Son madres primarizas"
+        content: "Son madres primerizas"
     },
     {
         title: "+44%",
         icon: "/img/icons/clase.svg",
-        content: "De las madres primarizas no finalizaron sus estudios secundarios"
+        content: "De las madres primerizas no finalizaron sus estudios secundarios"
     },
 ]
 
@@ -24,7 +24,7 @@ const ArticleBeneficiarios = () => {
                 <div className="max-w-7xl mx-auto px-5 sm:px-10 py-0">
                     <div className="mt-5 md:mt-20">
                         <p className="text-semiblack font-bold text-xl md:text-4xl">
-                            Para quienes hacemos Dýnamai
+                            Para quiénes hacemos Dýnamai
                         </p>
                         <div className="flex flex-row items-start flex-nowrap pt-0 md:pt-10 w-full justify-between">
                         {
